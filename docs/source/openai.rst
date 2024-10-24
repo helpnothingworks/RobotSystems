@@ -304,7 +304,7 @@ Suchen Sie in der Datei ``gpt_car.py`` nach den folgenden Zeilen. Sie können di
 
    # openai assistant init
    # =================================================================
-   openai_helper = OpenAiHelper(OPENAI_API_KEY, OPENAI_ASSISTANT_ID, 'picrawler')
+   openai_helper = OpenAiHelper(OPENAI_API_KEY, OPENAI_ASSISTANT_ID, 'picarx')
 
    # LANGUAGE = ['zh', 'en'] # config stt language code, https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
    LANGUAGE = []
