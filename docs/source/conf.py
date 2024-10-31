@@ -29,12 +29,9 @@ author = 'www.sunfounder.com'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx.ext.autosectionlabel',
-    'sphinx_copybutton',
-    'sphinx_rtd_theme',
-    "sphinx.ext.intersphinx",
+extensions = ['sphinx.ext.autosectionlabel'
 ]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -43,10 +40,12 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+
 # -- sphinx_rtd_theme Theme options -----------------------------------------------------
 html_theme_options = {
     'flyout_display': 'attached'
 }
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -56,16 +55,21 @@ html_theme_options = {
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-# Link to other projects’ documentation with intersphinx. Use the intersphinx_mapping configuration to indicate the name and link of the projects you want to use
 
 extensions = [
-    'sphinx.ext.intersphinx',
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton',
+    'sphinx_rtd_theme',
+    "sphinx.ext.intersphinx",
 ]
 
+# Link to other projects’ documentation with intersphinx. Use the intersphinx_mapping configuration to indicate the name and link of the projects you want to use
 
 intersphinx_mapping = {
     'ezblock': ('https://docs.sunfounder.com/projects/ezblock3/en/latest/', None),
 }
+
+intersphinx_disabled_reftypes = ["*"]
 
 html_static_path = ['_static']
 
