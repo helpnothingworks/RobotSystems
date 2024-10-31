@@ -29,7 +29,11 @@ author = 'www.sunfounder.com'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autosectionlabel'
+extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton',
+    'sphinx_rtd_theme',
+    "sphinx.ext.intersphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -40,10 +44,12 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+
 # -- sphinx_rtd_theme Theme options -----------------------------------------------------
 html_theme_options = {
     'flyout_display': 'attached'
 }
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -53,22 +59,17 @@ html_theme_options = {
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
+
 # Link to other projects’ documentation with intersphinx. Use the intersphinx_mapping configuration to indicate the name and link of the projects you want to use
-
-extensions = [
-    'sphinx.ext.autosectionlabel',
-    'sphinx_copybutton',
-    'sphinx_rtd_theme',
-    "sphinx.ext.intersphinx",
-]
-
 
 intersphinx_mapping = {
     'ezblock': ('https://docs.sunfounder.com/projects/ezblock3/en/latest/', None),
 }
 
+intersphinx_disabled_reftypes = ["*"]
 
 html_static_path = ['_static']
+
 
 # SunFounder logo
 
@@ -106,7 +107,7 @@ html_css_files = [
 
 # Multi-language
 
-language = 'en' # Before running make html, set the language.
+language = 'ja' # Before running make html, set the language.
 locale_dirs = ['locale/'] # .po files for other languages are placed in the locale/ folder.
 
 gettext_compact = False # Support for generating the contents of the folders inside source/ into other languages.
@@ -135,10 +136,9 @@ rst_epilog = """
 
     <a href="https://www.sunfounder.com/products/mini-usb-microphone?_pos=2&_sid=d05c80026&_ss=r" target="_blank">Microphone link</a>
 
-
 .. |link_sf_facebook| raw:: html
 
-    <a href="https://bit.ly/raphaelkit " target="_blank">ここ</a>
+    <a href="https://bit.ly/raphaelkit " target="_blank">here</a>
 
 .. |link_robot_hat| raw:: html
 
@@ -167,5 +167,14 @@ rst_epilog = """
 .. |link_it_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/picar-x-v20/it/latest/" target="_blank">Tutorial online in italiano</a>
+
+.. |link_PiCar-X_kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/picar-x?variant=44269165510891" target="_blank">Purchase Link for PiCar-X Kit</a>
+
+.. |link_PiCar_kit| raw:: html
+
+    <a href="https://www.sunfounder.com/products/picar-x?variant=44269165510891" target="_blank">PiCar-X</a>
+
 
 """
