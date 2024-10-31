@@ -29,7 +29,11 @@ author = 'www.sunfounder.com'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autosectionlabel'
+extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton',
+    'sphinx_rtd_theme',
+    "sphinx.ext.intersphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,13 +59,6 @@ html_theme_options = {
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-
-extensions = [
-    'sphinx.ext.autosectionlabel',
-    'sphinx_copybutton',
-    'sphinx_rtd_theme',
-    "sphinx.ext.intersphinx",
-]
 
 # Link to other projects’ documentation with intersphinx. Use the intersphinx_mapping configuration to indicate the name and link of the projects you want to use
 
