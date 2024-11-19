@@ -1,28 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_treasure:
 
-12. Treasure Hunt
+12. 寻宝游戏
 ============================
 
-Arrange a maze in your room and place six different color cards in six corners. Then control PiCar-X to search for these color cards one by one!
+在您的房间里布置一个迷宫，并在六个角落分别放置六张不同颜色的卡片。然后控制 PiCar-X 逐一寻找这些颜色卡片！
 
-.. note:: You can download and print the :download:`PDF Color Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/color-cards.pdf>` for color detection.
+.. note:: 您可以下载并打印色卡 :download:`PDF Color Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/color-cards.pdf>` 用于颜色检测。
 
-
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -33,9 +32,9 @@ Arrange a maze in your room and place six different color cards in six corners. 
     cd ~/picar-x/example
     sudo python3 12.treasure_hunt.py
 
-**View the Image**
+**查看画面**
 
-After the code runs, the terminal will display the following prompt:
+运行代码后，终端将显示以下提示：
 
 .. code-block::
 
@@ -47,11 +46,11 @@ After the code runs, the terminal will display the following prompt:
     * Debug mode: off
     * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
 
-Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the video screen. such as:  ``http://192.168.18.113:9000/mjpg``
+然后，您可以在浏览器中输入 ``http://<您的 IP>:9000/mjpg`` 查看视频画面，例如： ``http://192.168.18.113:9000/mjpg``
 
 .. image:: img/display.png
 
-**Code**
+**代码**
 
 .. code-block:: python
 
@@ -169,38 +168,37 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
             sleep(.2)
 
 
-**How it works?**
+**工作原理**
 
-To understand the basic logic of this code, you can focus on the following key parts:
+要理解此代码的基本逻辑，您可以关注以下关键部分：
 
-1. **Initialization and Imports:**
-   Import statements at the beginning of the code to understand the libraries being used.
+1. **初始化与导入：**
+   代码开头的导入语句用于了解所使用的库和模块。
 
-2. **Global Variables:**
-   Definitions of global variables, such as ``color`` and ``key``, which are used throughout the code to track the target color and keyboard input.
+2. **全局变量：**
+   定义全局变量，例如 ``color`` 和 ``key``，这些变量贯穿整个代码，用于跟踪目标颜色和键盘输入。
 
-3. ``renew_color_detect()`` :
-   This function selects a random color from a list and sets it as the target color for detection. It also uses text-to-speech to announce the selected color.
+3. ``renew_color_detect()`` ：
+   该函数从颜色列表中随机选择一个颜色，并将其设置为检测目标。同时，使用语音合成功能播报所选颜色。
 
-4. ``key_scan_thread()`` :
-   This function runs in a separate thread and continuously scans for keyboard input, updating the ``key`` variable with the pressed key. It uses a lock for thread-safe access.
+4. ``key_scan_thread()`` ：
+   该函数运行在单独的线程中，不断扫描键盘输入，并更新 ``key`` 变量为按下的键值。它使用锁机制确保线程访问的安全性。
 
-5. ``car_move(key)`` :
-   This function controls the movement of the PiCar-X based on the keyboard input (``key``). It sets the direction and speed of the robot's movement.
+5. ``car_move(key)`` ：
+   根据键盘输入（ ``key`` ）控制 PiCar-X 的移动。该函数设置机器人的方向和移动速度。
 
-6. ``main()`` :The primary function that orchestrates the overall logic of the code. It does the following:
+6. ``main()`` ： 代码的主要逻辑协调函数，其功能包括：
 
-    * Initializes the camera and starts displaying the camera feed.
-    * Creates a separate thread to scan for keyboard input.
-    * Announces the start of the game using text-to-speech.
-    * Enters a continuous loop to:
+    * 初始化摄像头并开始显示实时画面。
+    * 创建独立线程以扫描键盘输入。
+    * 通过语音播报宣布游戏开始。
+    * 进入一个循环：
 
-        * Check for detected colored objects and trigger actions when a valid object is detected.
-        * Handle keyboard input to control the robot and interact with the game.
-    * Handles quitting the game and exceptions like KeyboardInterrupt.
-    * Ensures that the camera is closed and the PiCar-X is stopped when exiting.
+        * 检查是否检测到颜色目标对象，并在检测到有效对象时触发相应动作。
+        * 处理键盘输入以控制机器人并与游戏交互。
+    * 处理游戏退出逻辑和诸如 ``KeyboardInterrupt`` 的异常情况。
+    * 确保退出时关闭摄像头并停止 PiCar-X。
 
-By understanding these key parts of the code, 
-you can grasp the fundamental logic of how the PiCar-X robot responds to keyboard 
-input and detects and interacts with objects of a 
-specific color using the camera and audio output capabilities.
+通过理解代码的这些关键部分，您可以掌握 PiCar-X 机器人如何响应键盘输入，
+以及如何利用摄像头和音频输出功能检测并与特定颜色的目标对象进行交互。
+

@@ -1,23 +1,23 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
 .. _openssh_powershell:
 
-Install OpenSSH via Powershell
+通过 Powershell 安装 OpenSSH
 ===================================
 
-When you use ``ssh <username>@<hostname>.local`` (or ``ssh <username>@<IP address>``) to connect to your Raspberry Pi, but the following error message appears.
+当您尝试使用 ``ssh <username>@<hostname>.local``（或 ``ssh <username>@<IP address>``）连接到 Raspberry Pi 时，出现以下错误信息：
 
     .. code-block::
 
@@ -25,20 +25,20 @@ When you use ``ssh <username>@<hostname>.local`` (or ``ssh <username>@<IP addres
         spelling of the name, or if a path was included, verify that the path is correct and try again.
 
 
-It means your computer system is too old and does not have `OpenSSH <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_ pre-installed, you need to follow the tutorial below to install it manually.
+这意味着您的计算机系统版本较旧，没有预装 `OpenSSH <https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui>`_。您需要按照以下教程手动安装。
 
-#. Type ``powershell`` in the search box of your Windows desktop, right click on the ``Windows PowerShell``, and select ``Run as administrator`` from the menu that appears.
+#. 在 Windows 桌面的搜索框中输入 ``powershell``，右键点击 ``Windows PowerShell``，并从出现的菜单中选择 ``以管理员身份运行``。
 
     .. image:: img/powershell_ssh.png
         :align: center
 
-#. Use the following command to install ``OpenSSH.Client``.
+#. 使用以下命令安装 ``OpenSSH.Client``。
 
     .. code-block::
 
         Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
-#. After installation, the following output will be returned.
+#. 安装完成后，您将看到以下输出：
 
     .. code-block::
 
@@ -46,13 +46,13 @@ It means your computer system is too old and does not have `OpenSSH <https://lea
         Online        : True
         RestartNeeded : False
 
-#. Verify the installation by using the following command.
+#. 使用以下命令验证安装情况。
 
     .. code-block::
 
         Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
-#. It now tells you that ``OpenSSH.Client`` has been successfully installed.
+#. 此时系统会显示 ``OpenSSH.Client`` 已成功安装。
 
     .. code-block::
 
@@ -63,8 +63,8 @@ It means your computer system is too old and does not have `OpenSSH <https://lea
         State : NotPresent
 
     .. warning:: 
-        If the above prompt does not appear, it means that your Windows system is still too old, and you are advised to install a third-party SSH tool, like :ref:`login_windows`.
+        如果未出现上述提示，这意味着您的 Windows 系统仍然过于陈旧，建议安装第三方 SSH 工具，例如 :ref:`login_windows`。
 
-#. Now restart PowerShell and continue to run it as administrator. At this point you will be able to log in to your Raspberry Pi using the ``ssh`` command, where you will be prompted to enter the password you set up earlier.
+#. 现在，重启 PowerShell 并继续以管理员身份运行。在此状态下，您可以使用 ``ssh`` 命令登录到 Raspberry Pi，系统会提示您输入之前设置的密码。
 
     .. image:: img/powershell_login.png

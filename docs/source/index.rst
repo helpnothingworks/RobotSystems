@@ -1,81 +1,77 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的乐趣。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能。
+    - **独家预览**：抢先获取新产品发布信息和独家预览。
+    - **专属折扣**：享受新品的独家优惠。
+    - **节日活动与赠品**：参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入！
 
 SunFounder |link_PiCar_kit|
 ============================================
 
 * |link_PiCar-X_kit|
 
-Thanks for choosing our |link_PiCar_kit|.
+感谢您选择我们的 |link_PiCar_kit|。
 
 .. note::
-    This document is available in the following languages.
+    本文档提供以下语言版本：
 
-        * |link_german_tutorials|
-        * |link_jp_tutorials|
-        * |link_en_tutorials|
-        * |link_fr_tutorials|
-        * |link_es_tutorials|
-        * |link_it_tutorials|
-    
-    Please click on the respective links to access the document in your preferred language.
+        * |link_german_tutorials| 
+        * |link_jp_tutorials| 
+        * |link_en_tutorials| 
+        * |link_fr_tutorials| 
+        * |link_es_tutorials| 
+        * |link_it_tutorials| 
+        * |link_cn_tutorials| 
 
+    请点击相应的链接访问您偏好的语言版本。
 
 .. image:: img/picar-x_v2.png
     :align: center
     :width: 500
 
-The PiCar-X is an AI-driven self-driving robot car for the Raspberry Pi platform, upon which the Raspberry Pi acts as the control center. 
-The PiCar-X's 2-axis camera module, ultrasonic module, and line tracking modules can provide the functions of color/face/traffic-signs detection, 
-automatic obstacle avoidance, automatic line tracking, etc.
+PiCar-X 是一款基于 Raspberry Pi 平台的 AI 驱动自驾机器人小车，其中 Raspberry Pi 作为控制中心。  
+PiCar-X 配备了双轴摄像头模块、超声波模块和巡线模块，支持色彩/人脸/交通标志识别、自动避障、自动巡线等功能。
 
-PiCar-X has two programming languages: Blockly and Python. No matter what language you program in, you'll find detailed steps to teach you everything from configuring the Raspberry Pi to running the relevant example code.
+PiCar-X 提供两种编程语言：Blockly 和 Python。无论您选择哪种语言，都能找到详细的步骤指导，从配置 Raspberry Pi 到运行相关示例代码。
 
 * :ref:`play_python`
 
-    * This chapter is for those who enjoy programming in Python or want to learn the Python language.
-    * To get Picar-X working properly, you must install some libraries first.
-    * The Raspberry Pi configuration and samples code for the PiCar-X are provided in this chapter.
-    * An APP - SunFounder Controller is also provided to allow you to remotely control the PiCar-X on your mobile device.
-
+    * 本章适合喜欢 Python 编程或希望学习 Python 的用户。
+    * 为确保 PiCar-X 正常运行，您需要首先安装一些库。
+    * 本章提供了 PiCar-X 的 Raspberry Pi 配置步骤和示例代码。
+    * 同时还提供了 SunFounder Controller 应用，可让您通过移动设备远程控制 PiCar-X。
 
 * :ref:`play_ezblock`
 
-    * In this section, you will use a Blockly based APP, Ezblock Studio, which, like Scratch, allows you to drag and drop blocks to make Picar-X move.
-    * It is required to reinstall the SD card with the operating system we provide with pre-installed Ezblock environment before programming. It is recommended to use a new or unused TF card for this section.
-    * Ezblock Studio is available for nearly all types of devices, including Macs, PCs, and Androids.
-    * Ezblock Studio is a good choice if you are 6-12 years old, or don't have programming skills, or want to test Picar-X quickly.
+    * 在本节中，您将使用基于 Blockly 的应用程序 Ezblock Studio，它类似于 Scratch，可以通过拖放积木让 PiCar-X 移动。
+    * 在编程前，需使用我们提供的预装 Ezblock 环境的操作系统重新安装 SD 卡，建议使用全新或未使用过的 TF 卡。
+    * Ezblock Studio 可用于几乎所有类型的设备，包括 Mac、PC 和 Android。
+    * 如果您是 6-12 岁的用户、没有编程经验，或希望快速测试 PiCar-X，Ezblock Studio 是一个不错的选择。
 
-**Content**
+**内容目录**
 
 .. toctree::
     :maxdepth: 3
 
-    About This Kit <self>
-    assemble
-    python/play_with_python
-    python_video_course/python_video_course
-    ezblock/play_with_ezblock
-    adjust_servo
-    openai
-    appendix/appendix
-    hardware/cpn_hardware
-    faq
+    本套件简介 <self>
+    组装指南 <assemble>
+    使用 Python 玩转 PiCar-X <python/play_with_python>
+    使用 Ezblock 玩转 PiCar-X <ezblock/play_with_ezblock>
+    调整舵机 <adjust_servo>
+    附录 <appendix/appendix>
+    硬件介绍 <hardware/cpn_hardware>
+    常见问题解答 <faq>
 
-Copyright Notice
+版权声明
 --------------------------
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study,investigation, enjoyment, or other non-commercial or nonprofit purposes, under therelated regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
-
-
+本手册中的所有内容（包括但不限于文字、图片和代码）均由 SunFounder 公司拥有。  
+仅限个人学习、研究、娱乐或其他非商业、非营利用途使用，需遵守相关法规和版权法律，不得侵犯作者及相关权利人的合法权益。  
+任何个人或组织未经授权将这些内容用于商业盈利用途，公司保留追究法律责任的权利。

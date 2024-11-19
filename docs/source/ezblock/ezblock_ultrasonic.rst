@@ -1,50 +1,50 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Test Ultrasonic Module
+测试超声波模块
 ==============================
 
-PiCar-X has a built-in Ultrasonic Sensor module that can be used for obstacle avoidance and automatic object-following experiments. In this lesson the module will read a distance in centimeters (24 cm = 1 inch), and **Print** the results in a **Debug** window.
+帕克内置超声波传感器模块，可用于避障和自动物体跟随实验。 在本课中，模块将读取以厘米为单位的距离（24 厘米 = 1 英寸），并在调试窗口中打印结果。
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_114549.png 
 
-The **Ultrasonic get distance** block will read the distance from the PiCar-X to an obstacle directly ahead.
+**超声波获取距离** 块将读取从帕克与正前方障碍物的距离。
 
 .. image:: img/sp210512_114830.png
 
-This program is simplified with a **Variable**. For example, when there are multiple functions in a program that each need to use the distance to an obstacle, a **Variable** can be used to report the same distance value to each function, instead of each function reading the same value separately.
+该程序使用 **变量** 进行了简化。 例如，当程序中有多个函数，每个函数都需要使用到障碍物的距离时，可以使用 **变量** 向每个函数报告相同的距离值，而不是每个函数单独读取相同的值.
 
 .. image:: img/sp210512_114916.png
 
-Click the **Create variable...** button on the **Variables** category, and use the drop-down arrow to select the variable named “distance”.
+使用变量需要先在 **变量** 类别里点击 **创建变量...** 按钮。
 
 .. image:: img/sp210512_114945.png
 
-The **Print** function can print data such as variables and text for easy debugging.
+**打印** 功能可以打印变量、文本等数据，方便调试。
 
 .. image:: img/debug_monitor.png
 
-Once the code is running, enable the debug monitor by clicking the **Debug** icon in the bottom left corner.
+代码运行后，通过单击左下角的 **调试** 图标启用调试监视器。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
-
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
 
 .. image:: img/sp210512_115125.png
+
+代码运行后，你将看到检测的距离值显示在调试监视器中。

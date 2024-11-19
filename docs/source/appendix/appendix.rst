@@ -1,25 +1,25 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的精彩世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过社区和团队的帮助解决售后问题及技术挑战。
+    - **学习与分享**：交换技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品公告和独家预览。
+    - **特别折扣**：享受最新产品的专属折扣优惠。
+    - **节日促销与赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好和我们一起探索与创造了吗？点击 [|link_sf_facebook|]，立即加入吧！
 
-Appendix
+附录
 =================
-
 
 .. toctree::
     
     filezilla
     login_windows
     install_openssh_powershell
+    web_ezblock
 
 

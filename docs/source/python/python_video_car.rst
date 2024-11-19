@@ -1,27 +1,26 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的乐趣。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：在社区和团队的帮助下解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布和独家预览。
+    - **专属折扣**：享受新品的独家优惠。
+    - **节日活动与赠品**：参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入！
 
 .. _video_car:
 
-11. Video Car
+11. 视频小车
 ==========================================
 
-This program will provide a First Person View from the PiCar-X! 
-Use the keyboards WSAD keys to control the direction of movement, 
-and the O and P to adjust the speed.
+此程序为您提供 PiCar-X 的第一视角体验！通过键盘上的 WSAD 键控制方向，
+使用 O 和 P 键调整速度。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -32,21 +31,21 @@ and the O and P to adjust the speed.
     cd ~/picar-x/example
     sudo python3 11.video_car.py
 
-Once the code is running, you can see what PiCar-X is shooting and control it by pressing the following keys.
+代码运行后，您可以看到 PiCar-X 拍摄的画面，并通过以下按键进行控制：
 
-* O: speed up
-* P: speed down
-* W: forward  
-* S: backward
-* A: turn left
-* D: turn right
-* F: stop
-* T: take photo
-* Ctrl+C: quit
+* O: 加速
+* P: 减速
+* W: 前进  
+* S: 后退
+* A: 左转
+* D: 右转
+* F: 停止
+* T: 拍照
+* Ctrl+C: 退出
 
-**View the Image**
+**查看画面**
 
-After the code runs, the terminal will display the following prompt:
+代码运行后，终端将显示以下提示：
 
 .. code-block::
 
@@ -58,12 +57,11 @@ After the code runs, the terminal will display the following prompt:
     * Debug mode: off
     * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
 
-Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the video screen. such as:  ``https://192.168.18.113:9000/mjpg``
+然后您可以在浏览器中输入 ``http://<你的IP>:9000/mjpg`` 查看视频画面，例如： ``https://192.168.18.113:9000/mjpg``
 
 .. image:: img/display.png
 
-
-**code**
+**代码**
 
 .. code-block:: python
     
@@ -83,18 +81,18 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
     sleep(0.2)
 
     manual = '''
-    Press key to call the function(non-case sensitive):
+    按下键盘按键以调用功能（不区分大小写）：
 
-        O: speed up
-        P: speed down
-        W: forward  
-        S: backward
-        A: turn left
-        D: turn right
-        F: stop
-        T: take photo
+        O: 加速
+        P: 减速
+        W: 前进  
+        S: 后退
+        A: 左转
+        D: 右转
+        F: 停止
+        T: 拍照
 
-        Ctrl+C: quit
+        Ctrl+C: 退出
     '''
 
 
@@ -134,16 +132,16 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
 
         Vilib.camera_start(vflip=False,hflip=False)
         Vilib.display(local=True,web=True)
-        sleep(2)  # wait for startup
+        sleep(2)  # 等待启动
         print(manual)
         
         while True:
             print("\rstatus: %s , speed: %s    "%(status, speed), end='', flush=True)
-            # readkey
+            # 读取按键
             key = readchar.readkey().lower()
-            # operation 
+            # 操作处理
             if key in ('wsadfop'):
-                # throttle
+                # 油门
                 if key == 'o':
                     if speed <=90:
                         speed += 10           
@@ -152,32 +150,32 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
                         speed -= 10
                     if speed == 0:
                         status = 'stop'
-                # direction
+                # 方向控制
                 elif key in ('wsad'):
                     if speed == 0:
                         speed = 10
                     if key == 'w':
-                        # Speed limit when reversing,avoid instantaneous current too large
+                        # 倒车时限速，避免瞬间电流过大
                         if status != 'forward' and speed > 60:  
                             speed = 60
                         status = 'forward'
                     elif key == 'a':
                         status = 'turn left'
                     elif key == 's':
-                        if status != 'backward' and speed > 60: # Speed limit when reversing
+                        if status != 'backward' and speed > 60: # 倒车时限速
                             speed = 60
                         status = 'backward'
                     elif key == 'd':
                         status = 'turn right' 
-                # stop
+                # 停止
                 elif key == 'f':
                     status = 'stop'
-                # move 
+                # 移动
                 move(status, speed)  
-            # take photo
+            # 拍照
             elif key == 't':
                 take_photo()
-            # quit
+            # 退出
             elif key == readchar.key.CTRL_C:
                 print('\nquit ...')
                 px.stop()

@@ -1,36 +1,38 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Beware of Pedestrians
-=============================
+礼让行人
+==============================
 
-This project will make the PiCar-X perform appropriate measures based on road conditions. While driving, the PiCar-X will come to a complete stop if a pedestrian is detected in its path.
+该项目将使帕克根据路况采取适当的措施。 在行驶过程中，如果在其路径上检测到行人，帕克将完全停止。
 
-Once the program is running, hold a photo of a person in front of the PiCar-X. The Video Monitor will detect the person's face, and the PiCar-X will automatically come to a stop.
+程序运行后，在帕克前面放一张人的照片。 视频监视器将检测到人脸，帕克将自动停止。
 
-To simulate driving safety protocols, a judgment procedure is created that will send a **[count]** value to a **if do else** block. The judgement procedure will look for a human face 10 times, and if a face does appear it will increment **[count]** by +1. When **[count]** is larger than 3, the PiCar-X will stop moving.
+为了模拟驾驶安全协议，创建了一个判断程序，该程序将向 **如果-执行-否则** 块发送 **[count]** 值。 判断程序会寻找人脸 10 次，如果确实出现了人脸，则将 **[count]** 增加 +1。 当 **[count]** 大于 3 时，帕克将停止移动。
 
-* :ref:`ezblock:remote_control_latest`
+.. * `如何使用视频功能 <https://docs.sunfounder.com/projects/ezblock3/en/latest/use_video.html>`_
 
 .. image:: img/face_detection.PNG
 
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 .. image:: img/sp210512_185509.png
+
+程序运行后，在帕克前面放一张人的照片。 视频监视器将检测到人脸，帕克将自动停止。

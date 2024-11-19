@@ -1,37 +1,37 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
-7. Servo Adjust(Important)
+7. 舵机校准（重要）
 ============================
 
 .. note::
 
-    If your Robot HAT is version V44 or higher (with the speaker located at the top of the board) and includes an onboard **Zero** button, you can skip this step and simply press the **Zero** button to activate the servo zeroing program.
+    如果您的 Robot HAT 版本为 V44 或更高（带有顶部扬声器）并包含一个板载 **Zero** 按钮，则您可以跳过此步骤，只需按下 **Zero** 按钮即可激活舵机归零程序。
 
     .. image:: img/robot_hat_v44.png
         :width: 500
         :align: center
 
-The angle range of the servo is -90~90, but the angle set at the factory is random, maybe 0°, maybe 45°; if we assemble it with such an angle directly, it will lead to a chaotic state after the robot runs the code, or worse, it will cause the servo to block and burn out.
+舵机的角度范围为 -90° ~ 90°，但出厂时设置的角度是随机的，可能是 0°，也可能是 45°；如果我们直接以这样的角度组装舵机，可能会导致机器人运行代码后出现混乱，甚至导致舵机卡住或烧毁。
 
-So here we need to set all the servo angles to 0° and then install them, so that the servo angle is in the middle, no matter which direction to turn.
+因此，在安装舵机之前，我们需要将所有舵机的角度设置为 0°，这样舵机的角度会处于中间位置，无论转向哪个方向都可以正常工作。
 
-#. To ensure that the servo has been properly set to 0°, first insert the servo arm into the servo shaft and then gently rotate the rocker arm to a different angle. This servo arm is just to allow you to clearly see that the servo is rotating.
+#. 为了确保舵机正确设置为 0°，首先将舵机摇臂插入舵机轴，然后轻轻旋转摇臂到不同角度。这样可以清楚地观察舵机的转动。
 
     .. image:: img/servo_arm.png
 
-#. Now, run ``servo_zeroing.py`` in the ``example/`` folder.
+#. 现在，运行 ``servo_zeroing.py`` 程序，该程序位于 ``example/`` 文件夹中。
 
     .. raw:: html
 
@@ -42,16 +42,14 @@ So here we need to set all the servo angles to 0° and then install them, so tha
         cd ~/picar-x/example
         sudo python3 servo_zeroing.py
 
-#. Next, plug the servo cable into the P11 port as follows, at the same time you will see the servo arm rotate to a position(This is the 0° position, which is a random location and may not be vertical or parallel.).
-
+#. 接下来，将舵机线缆插入 P11 接口，同时您会看到舵机摇臂旋转到某个位置（这是 0° 的位置，此位置是随机的，可能不垂直或平行）。
 
     .. image:: img/Z_P11.JPG
 
-#. Now, remove the servo arm, ensuring the servo wire remains connected, and do not turn off the power. Then continue the assembly following the paper instructions.
+#. 现在，拆下舵机摇臂，确保舵机线缆保持连接，并且不要关闭电源。然后按照纸质说明书继续进行组装。
 
 .. note::
 
-    * Do not unplug this servo cable before fixing it with the servo screw, you can unplug it after fixing it.
-    * Do not rotate the servo while it is powered on to avoid damage; if the servo shaft is not inserted at the right angle, pull the servo out and reinsert it.
-    * Before assembling each servo, you need to plug the servo cable into P11 and turn on the power to set its angle to 0°.
-
+    * 在用舵机螺丝固定之前，请勿拔下舵机线缆，固定后再拔下。
+    * 在舵机通电的情况下，请勿旋转舵机，以免损坏；如果舵机轴未正确插入，拔出舵机重新插入。
+    * 在组装每个舵机之前，需将舵机线缆插入 P11 接口，并打开电源将其角度设置为 0°。

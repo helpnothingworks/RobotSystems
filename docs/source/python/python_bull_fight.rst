@@ -1,27 +1,25 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_bull_fight:
 
-10. Bull Fight
+10. 公牛冲锋
 =============================
 
+让 PiCar-X 变成愤怒的公牛！使用它的摄像头追踪并冲向红色布料！
 
-Make PiCar-X an angry bull! Use its camera to track and rush the red cloth!
-
-
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -33,9 +31,9 @@ Make PiCar-X an angry bull! Use its camera to track and rush the red cloth!
     sudo python3 10.bull_fight.py
 
 
-**View the Image**
+**查看视频画面**
 
-After the code runs, the terminal will display the following prompt:
+代码运行后，终端将显示以下提示信息：
 
 .. code-block::
 
@@ -47,15 +45,14 @@ After the code runs, the terminal will display the following prompt:
     * Debug mode: off
     * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
 
-Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the video screen. such as:  ``https://192.168.18.113:9000/mjpg``
+然后在浏览器中输入 ``http://<你的 IP>:9000/mjpg``，即可查看视频画面，例如： ``https://192.168.18.113:9000/mjpg``
 
 .. image:: img/display.png
 
-**Code**
+**代码**
 
 .. note::
-    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to source code path like ``picar-x\examples``. After modifying the code, you can run it directly to see the effect.
-
+    您可以 **修改/重置/复制/运行/停止** 以下代码。但在此之前，需进入源码路径，例如 ``picar-x\examples``。修改代码后，您可以直接运行以查看效果。
 
 .. raw:: html
 
@@ -70,7 +67,7 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
     px = Picarx()
 
     def clamp_number(num,a,b):
-    return max(min(num, max(a, b)), min(a, b))
+        return max(min(num, max(a, b)), min(a, b))
 
     def main():
         Vilib.camera_start()
@@ -84,8 +81,8 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
             if Vilib.detect_obj_parameter['color_n']!=0:
                 coordinate_x = Vilib.detect_obj_parameter['color_x']
                 coordinate_y = Vilib.detect_obj_parameter['color_y']
-                
-                # change the pan-tilt angle for track the object
+
+                # 调整云台角度以追踪目标
                 x_angle +=(coordinate_x*10/640)-5
                 x_angle = clamp_number(x_angle,-35,35)
                 px.set_cam_pan_angle(x_angle)
@@ -94,9 +91,8 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
                 y_angle = clamp_number(y_angle,-35,35)
                 px.set_cam_tilt_angle(y_angle)
 
-                # move
-                # The movement direction will change slower than the pan/tilt direction 
-                # change to avoid confusion when the picture changes at high speed.
+                # 移动
+                # 为避免高速变化时画面混乱，移动方向的变化速度比云台角度变化更慢
                 if dir_angle > x_angle:
                     dir_angle -= 1
                 elif dir_angle < x_angle:
@@ -109,40 +105,36 @@ Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the vid
                 px.forward(0)
                 sleep(0.05)
 
-
     if __name__ == "__main__":
         try:
-        main()
-        
+            main()
         finally:
             px.stop()
             print("stop and exit")
             sleep(0.1)
 
-**How it works?**
+**工作原理**
 
-You need to pay attention to the following three parts of this example:
+您需要注意以下三个部分的实现：
 
-1. Define the main function:
+1. 定义主函数：
 
-    * Start the camera using ``Vilib.camera_start()``.
-    * Display the camera feed using ``Vilib.display()``.
-    * Enable color detection and specify the target color as "red" using ``Vilib.color_detect("red")``.
-    * Initialize variables: ``speed`` for car movement speed, ``dir_angle`` for the direction angle of the car's movement, ``x_angle`` for the camera's pan angle, and ``y_angle`` for the camera's tilt angle.
+    * 使用 ``Vilib.camera_start()`` 启动摄像头。
+    * 使用 ``Vilib.display()`` 显示摄像头画面。
+    * 使用 ``Vilib.color_detect("red")`` 启用颜色检测功能，并将目标颜色设置为“红色”。
+    * 初始化变量： ``speed`` 表示小车的移动速度， ``dir_angle`` 表示小车的移动方向角度， ``x_angle`` 和 ``y_angle`` 分别表示摄像头的水平和垂直角度。
 
+2. 进入循环 (while True) 追踪红色物体：
 
-2. Enter a continuous loop (while True) to track the red-colored object:
+    * 检查是否检测到红色物体（ ``Vilib.detect_obj_parameter['color_n'] != 0`` ）。
+    * 如果检测到红色物体，获取其坐标（ ``coordinate_x`` 和 ``coordinate_y`` ）。
+    * 根据检测到的物体位置计算新的云台水平角和垂直角（ ``x_angle`` 和 ``y_angle`` ），并调整角度以追踪目标。
+    * 使用 ``clamp_number`` 函数限制云台角度在指定范围内。
+    * 使用 ``px.set_cam_pan_angle()`` 和 ``px.set_cam_tilt_angle()`` 设置摄像头角度，使目标保持在画面中心。
 
-    * Check if there is a detected red-colored object (``Vilib.detect_obj_parameter['color_n'] != 0``).
-    * If a red-colored object is detected, obtain its coordinates (``coordinate_x`` and ``coordinate_y``).
-    * Calculate new pan and tilt angles (``x_angle`` and ``y_angle``) based on the detected object's position and adjust them to track the object.
-    * Limit the pan and tilt angles within the specified range using the ``clamp_number`` function.
-    * Set the camera's pan and tilt angles using ``px.set_cam_pan_angle()`` and ``px.set_cam_tilt_angle()`` to keep the object in view.
+3. 根据 dir_angle 和 ``x_angle`` 的差值控制小车运动：
 
-
-3. Control the car's movement based on the difference between dir_angle and ``x_angle``:
-
-    * If ``dir_angle`` is greater than ``x_angle``, decrement ``dir_angle`` by 1 to gradually change the direction angle.
-    * If ``dir_angle`` is less than ``x_angle``, increment ``dir_angle`` by 1.
-    * Set the direction servo angle using ``px.set_dir_servo_angle()`` to steer the car's wheels accordingly.
-    * Move the car forward at the specified speed using ``px.forward(speed)``.
+    * 如果 ``dir_angle`` 大于 ``x_angle`` ，则每次递减 ``dir_angle`` 的值以逐步改变方向。
+    * 如果 ``dir_angle`` 小于 ``x_angle`` ，则每次递增 ``dir_angle`` 的值。
+    * 使用 ``px.set_dir_servo_angle()`` 设置小车方向舵机的角度以控制转向。
+    * 使用 ``px.forward(speed)`` 以指定速度移动小车。

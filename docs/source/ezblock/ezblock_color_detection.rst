@@ -1,61 +1,70 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Color Detection
-===========================
+颜色检测
+============================
 
-PiCar-X is a self-driving car with a built-in camera, which allows Ezblock programs to utilize object detection and color recognition code. In this section, Ezblock will be used to create a program for color detection. 
+帕克是一款内置摄像头的自动驾驶汽车，它允许 EzBlock 程序利用物体检测和颜色识别代码。 在本节中，EzBlock 将用于创建颜色检测程序。
 
 .. note:: 
 
-    Before attempting this section, make sure that the Raspberry Pi Camera’s FFC cable is properly and securely connected. For detailed instructions on securely connecting the FCC cable, please reference: :ref:`assembly_instructions`.
+    在尝试本部分之前，请确保树莓派相机的 FFC 电缆已正确且牢固地连接。 
+    
+    .. 有关牢固连接 FFC 电缆的详细说明，请参考：:ref:`部件清单和装配说明`。
 
-In this program, Ezblock will first be told the Hue-Saturation-Value (HSV) space range of the color to be detected, then utilize OpenCV to process the colors in the HSV range to remove the background noise, and finally, box the matching color.
+在这个程序中，EzBlock首先会被告知待检测颜色的HSV（Hue-Saturation-Value）空间范围，然后利用OpenCV对HSV范围内的颜色进行处理去除背景噪声，最后对匹配颜色进行框选。
 
-Ezblock includes 6 color models for PiCar-X, “red”, “orange”, “yellow”, “green”, “blue”, and “purple”. Color cards have been prepared in the following PDF, and will need to be printed on a color printer.
+EzBlock 包括帕克的 6 种颜色模型，“红色”、“橙色”、“黄色”、“绿色”、“蓝色”和“紫色”。 色卡已在以下 PDF 中准备好，需可以下载下来打印。
 
-* :download:`[PDF]Color Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/color-cards.pdf>`
+* :download:`[PDF]颜色卡 <https://gitee.com/sunfounder/sf-pdf/raw/master/%E5%8D%A1%E7%89%87/%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB/%E9%A2%9C%E8%89%B2%E5%8D%A1.pdf>`
 
 .. image:: img/color_card.png
     :width: 600
 
 .. note::
 
-    The printed colors may have a slightly different hue from the Ezblock color models due to printer toner differences, or the printed medium, such as a tan-colored paper. This can cause a less accurate color recognition.
+    由于打印机碳粉或打印介质（如棕褐色纸）的不同，打印颜色可能与颜色模型的色调略有不同。这可能会导致不太准确的颜色识别。
 
 
 .. image:: img/ezblock_color_detect.PNG
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_121105.png
 
-Drag the Video widget from the remote Control page, and it will generate a video monitor. For more information on how to use the Video widget, please reference the tutorial on Ezblock video here: :ref:`ezblock:video_latest`.
+从远程控制页面拖动视频小部件，它将生成一个视频监视器。 
+
+
+.. image:: img/sp211203_103130.png
+
+点击视频监视器将会出现属性框，你可以在这里调节它的大小。
 
 .. image:: img/sp210512_121125.png
 
-Enable the video monitor by setting the **camera monitor** block to **on**. Note: Setting the **camera monitor** to **off** will close the monitor, but object detection will still be available.
+通过将 **视频监视器** 块设置为 **开** 来启用视频监视器。 注意：将 **视频监视器** 设置为 **关** 将关闭监视器，但对象检测仍然可用。
 
 .. image:: img/sp210512_134133.png
 
-Use the **color detection** block to enable the color detection. Note: only one color can be detected at a time.
+使用 **颜色检测** 块来启用颜色检测。 注意：一次只能检测一种颜色。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 .. image:: img/sp210512_134636.png
+
+代码运行后，进入到远程控制界面，你将看到摄像头拍摄的画面，并且将红色物体框选出来。

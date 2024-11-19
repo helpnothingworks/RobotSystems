@@ -1,28 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能。
+    - **独家预览**：抢先获取新产品发布信息和独家预览。
+    - **专属折扣**：享受新品的独家优惠。
+    - **节日活动与赠品**：参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入！
 
 .. _assembly_instructions:
 
-
-Assemble the PiCar-X
+组装 PiCar-X
 ==========================================
 
-Before assembling the PiCar-X, please first verify that all parts and components have been included. If there are any missing or damaged components, please contact SunFounder immediately at service@sunfounder.com to resolve the issue as soon as possible.
+在组装 PiCar-X 之前，请先确认所有部件和组件是否齐全。如果发现有缺失或损坏的部件，请立即通过 service@sunfounder.com 联系 SunFounder，以尽快解决问题。
 
-.. **Download Assembly Instructions**
+.. **下载组装说明书**
 
-.. The printed assembly instructions are updated periodically based on requirements, and you can check the version number in the top right corner of your booklet. If you've misplaced your printed instructions or prefer a PDF version, you can download the corresponding version from the links below. Make sure the version number matches the one on your printed instructions.
+.. 纸质版组装说明书会根据需求定期更新，您可以在说明书右上角查看版本号。如果您丢失了纸质说明书，或者更喜欢 PDF 版本，可以通过以下链接下载相应版本。请确保下载的版本号与您的纸质说明书版本一致。
 
 .. .. image:: img/version_number.png
 ..     :width: 300
@@ -31,38 +30,35 @@ Before assembling the PiCar-X, please first verify that all parts and components
 .. * :download:`Z0104V40 <https://github.com/sunfounder/sf-pdf/raw/master/assembly_file/z0104v40-a0001013-picar-x.pdf>`
 .. * :download:`Z0104V33 <https://github.com/sunfounder/sf-pdf/raw/master/assembly_file/z0104v33-a0001013-picar-x.pdf>`
 
-**Mount Raspberry Pi Zero W on PiCar-X**
+**安装 Raspberry Pi Zero W 到 PiCar-X**
 
-If your mainboard is a Raspberry Pi Zero W, here are the steps to install it on the PiCar-X. 
+如果您的主板是 Raspberry Pi Zero W，请按照以下步骤将其安装到 PiCar-X 上。
 
 .. note::
 
-    The assembly steps in the video may differ slightly from the printed instructions you have. Please prioritize following the printed instructions. If any steps are unclear, you can refer to the video for further clarification.
+    视频中的组装步骤可能与您的纸质说明书略有不同。请优先参考纸质说明书。如果某些步骤不清楚，可以参考视频进一步了解。
 
 .. raw:: html
 
     <iframe width="700" height="500" src="https://www.youtube.com/embed/DcobAsvRrV0?si=9cEGmphSqD9WVKzV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Afterward, you can continue following the instructions in the video below from **1:45** onwards to assemble it.
+接下来，您可以从视频的 **1:45** 处继续按照说明进行组装。
 
 
-**Assembly Tutorial Video(Raspberry Pi 4/3/1 Model)**
+**组装教程视频（适用于 Raspberry Pi 4/3/1 型号）**
 
-This video will walk you through the process of assembling your robot from scratch.
+本视频将引导您从零开始组装您的机器人。
 
 .. note::
 
-    The assembly steps in the video may differ slightly from the printed instructions you have. Please prioritize following the printed instructions. If any steps are unclear, you can refer to the video for further clarification.
+    视频中的组装步骤可能与您的纸质说明书略有不同。请优先参考纸质说明书。如果某些步骤不清楚，可以参考视频进一步了解。
 
-In this tutorial, you will learn:
+在本教程中，您将学习：
 
-* **Preparation**: We'll introduce you to all the tools and parts needed, ensuring you're fully equipped before starting the assembly.
-
-* **Assembly Steps**: We'll demonstrate each assembly step in a systematic manner.
-
-* **Tips and Considerations**: Throughout the process, we'll share essential tips and tricks to help you avoid common mistakes and ensure your car operates smoothly.
-
-* **Zeroing a Servo**: Before fixing each servo, it needs to be zeroed first. The steps for zeroing are to first install the Raspberry Pi OS, then install the required modules, and then run a script (set the angle of all PWM pins to 0). After that, plug in the servo wire to zero the servo.
+* **准备工作**：我们会向您介绍所有所需的工具和部件，确保您在开始组装前已完全准备就绪。
+* **组装步骤**：我们将系统地展示每个组装步骤。
+* **注意事项与提示**：在整个过程中，我们会分享重要的技巧和注意事项，帮助您避免常见错误，确保小车顺利运行。
+* **舵机归零**：在固定每个舵机之前，需要先将其归零。归零的步骤包括安装 Raspberry Pi OS，安装所需模块，然后运行一个脚本（将所有 PWM 引脚角度设置为 0）。之后，将舵机线连接到电路上以完成舵机归零。
 
 .. raw:: html
 

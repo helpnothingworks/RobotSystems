@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_cliff:
 
-6. Cliff Detection 
+6. 悬崖检测
 ===========================
 
-Let us give PiCar-X a little self-protection awareness and let it learn to use its own grayscale module to avoid rushing down the cliff.
+让我们为 PiCar-X 增加一些自我保护意识，让它学会使用自身的灰度模块避免冲下悬崖。
 
-In this example, the car will be dormant. 
-If you push it to a cliff, it will be awakened urgently, then back up, and say "danger".
+在本示例中，小车将处于休眠状态。如果您将它推到悬崖边缘，它会紧急唤醒，
+然后倒退，并说出“危险”。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -34,10 +34,10 @@ If you push it to a cliff, it will be awakened urgently, then back up, and say "
     sudo python3 6.cliff_detection.py
     
 
-**Code**
+**代码**
 
 .. note::
-    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``picar-x/example``. After modifying the code, you can run it directly to see the effect.
+    您可以 **修改/重置/复制/运行/停止** 以下代码。但在此之前，需进入源码路径，例如 ``picar-x/example``。修改代码后，您可以直接运行以查看效果。
 
 .. raw:: html
 
@@ -54,7 +54,7 @@ If you push it to a cliff, it will be awakened urgently, then back up, and say "
 
     px = Picarx()
     # px = Picarx(grayscale_pins=['A0', 'A1', 'A2'])
-    # manual modify reference value
+    # 手动修改参考值
     px.set_cliff_reference([200, 200, 200])
 
     current_state = None
@@ -67,7 +67,7 @@ If you push it to a cliff, it will be awakened urgently, then back up, and say "
             while True:
                 gm_val_list = px.get_grayscale_data()
                 gm_state = px.get_cliff_status(gm_val_list)
-                # print("cliff status is:  %s"%gm_state)
+                # print("悬崖状态是:  %s" % gm_state)
 
                 if gm_state is False:
                     state = "safe"
@@ -85,10 +85,10 @@ If you push it to a cliff, it will be awakened urgently, then back up, and say "
             print("stop and exit")
             sleep(0.1)
 
-**How it works?** 
+**工作原理**
 
-The function to detect the cliff looks like this:
+检测悬崖的功能如下：
 
-* ``get_grayscale_data()``: This method directly outputs the readings of the three sensors, from right to left. The brighter the area, the larger the value obtained.
+* ``get_grayscale_data()``：此方法直接输出从右到左的三个传感器读数。区域越亮，获得的数值越大。
 
-* ``get_cliff_status(gm_val_list)``: This method compares the readings from the three probes and outputs a result. If the result is true, it is detected that there is a cliff in front of the car.
+* ``get_cliff_status(gm_val_list)``：此方法比较三个探头的读数并输出结果。如果结果为 True，则表示检测到小车前方存在悬崖。

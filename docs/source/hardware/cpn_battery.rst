@@ -1,33 +1,33 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
-3-pin Battery
+3针电池
 =================
 
 .. image:: img/3pin_battery.jpg
 
-* **VCC**: Battery positive terminal, here there are two sets of VCC and GND is to increase the current and reduce the resistance.
-* **Middle**: To balance the voltage between the two cells and thus protect the battery.
-* **GND**: Negative battery terminal.
+* **VCC**: 电池正极，在这里提供了两组 VCC 和 GND，用于增强电流并降低电阻。
+* **中间引脚**: 平衡两节电池之间的电压，从而保护电池。
+* **GND**: 电池负极。
 
-This is a custom battery pack made by SunFounder consisting of two 18650 batteries with a capacity of 2000mAh. The connector is XH2.54 3P, which can be charged directly after being inserted into the Robot HAT.
+这是由 SunFounder 定制的一款电池组，由两节 18650 电池组成，容量为 2000mAh。连接器为 XH2.54 3P，可直接插入 Robot HAT 进行充电。
 
-**Features**
+**产品特点**
 
-* Composition: Li-ion
-* Battery Capacity: 2000mAh, 14.8Wh
-* Battery Weight: 90.8g
-* Number of Cells: 2
-* Connector: XH2.54 3P
-* Over-discharge protection: 6.0V
+* 组成：锂离子电池
+* 电池容量：2000mAh，14.8Wh
+* 电池重量：90.8g
+* 电芯数量：2
+* 连接器：XH2.54 3P
+* 过放电保护：6.0V

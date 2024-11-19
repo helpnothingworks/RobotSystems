@@ -1,57 +1,55 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
 .. _login_windows:
 
 PuTTY
 =========================
 
-If you are a Windows user, you can use some applications of SSH. Here, we recommend `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_.
+如果您是 Windows 用户，可以使用一些 SSH 工具。在这里，我们推荐 `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_。
 
-**Step 1**
+**步骤 1**
 
-Download PuTTY.
+下载 PuTTY。
 
-**Step 2**
+**步骤 2**
 
-Open PuTTY and click **Session** on the left tree-alike structure. Enter
-the IP address of the RPi in the text box under **Host Name (or IP
-address)** and **22** under **Port** (by default it is 22).
+打开 PuTTY，点击左侧树状结构中的 **Session**。在 **Host Name (or IP address)** 下的文本框中输入树莓派的 IP 地址，在 **Port** 中输入 **22**（默认端口为 22）。
 
 .. image:: img/image25.png
     :align: center
 
-**Step 3**
+**步骤 3**
 
-Click **Open**. Note that when you first log in to the Raspberry Pi with
-the IP address, there prompts a security reminder. Just click **Yes**.
+点击 **Open**。注意，当您首次使用 IP 地址登录树莓派时，可能会出现安全提醒。
+直接点击 **Yes** 即可。
 
-**Step 4**
+**步骤 4**
 
-When the PuTTY window prompts \"**login as:**\", type in
-\"**pi**\" (the user name of the RPi), and **password**: \"raspberry\"
-(the default one, if you haven't changed it).
+当 PuTTY 窗口提示 \"**login as:**\" 时，输入 \"**pi**\"（树莓派的用户名），
+然后输入 **password**: \"raspberry\"（默认密码，如果您未更改）。
 
 .. note::
 
-    When you input the password, the characters do not display on window accordingly, which is normal. What you need is to input the correct password.
+    输入密码时，窗口中不会显示字符，这是正常现象。只需输入正确的密码即可。
     
-    If inactive appears next to PuTTY, it means that the connection has been broken and needs to be reconnected.
+    如果 PuTTY 显示 inactive，说明连接已中断，需要重新连接。
     
 .. image:: img/image26.png
     :align: center
 
-**Step 5**
+**步骤 5**
 
-Here, we get the Raspberry Pi connected and it is time to conduct the next steps.
+
+现在，树莓派已经成功连接，可以进行下一步操作。

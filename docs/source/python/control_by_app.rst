@@ -1,38 +1,37 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _control_by_app:
 
-13. Controlled by the APP
+13. 通过 APP 控制
 ==================================
 
-The SunFounder controller is used to control Raspberry Pi/Pico based robots.
+SunFounder Controller 可用于控制基于 Raspberry Pi/Pico 的机器人。
 
-The APP integrates Button, Switch, Joystick, D-pad, Slider and Throttle Slider widgets; Digital Display, Ultrasonic Radar, Grayscale Detection and Speedometer input widgets.
+该 APP 集成了按钮、开关、摇杆、方向键、滑块和推力滑块等控件；还包含数字显示、超声雷达、灰度检测和速度计等输入控件。
 
-There are 17 areas A-Q , where you can place different widgets to customize your own controller.
+您可以在 17 个区域（A-Q）中放置不同的控件，自定义您的控制器。
 
-In addition, this application provides a live video streaming service.
+此外，该应用程序还支持实时视频流服务。
 
-Let's customize a PiCar-X controller using this app.
+接下来，让我们使用该 APP 自定义一个 PiCar-X 控制器。
 
-**How to do?**
+**操作步骤**
 
-#. Install the ``sunfounder-controller`` module.
+#. 安装 ``sunfounder-controller`` 模块。
 
-    The ``robot-hat``, ``vilib``, and ``picar-x`` modules need to be installed first, for details see: :ref:`install_all_modules`.
-
+    首先需要安装 ``robot-hat``、 ``vilib``  和 ``picar-x`` 模块，详细说明见：:ref:`install_all_modules`。
 
     .. raw:: html
 
@@ -45,7 +44,7 @@ Let's customize a PiCar-X controller using this app.
         cd ~/sunfounder-controller
         sudo python3 setup.py install
 
-#. Run the code.
+#. 运行代码。
 
     .. raw:: html
 
@@ -56,52 +55,50 @@ Let's customize a PiCar-X controller using this app.
         cd ~/picar-x/example
         sudo python3 13.app_control.py
 
-#. Install `SunFounder Controller <https://docs.sunfounder.com/projects/sf-controller/en/latest/>`_ from **APP Store(iOS)** or **Google Play(Android)**.
 
+#. 从 **APP Store(iOS)** 或 **Google Play(Android)** 下载并安装 `SunFounder Controller <https://docs.sunfounder.com/projects/sf-controller/en/latest/>`_。
 
-#. Open and create a new controller.
+#. 打开并创建一个新的控制器。
 
-    Create a new controller by clicking on the + sign in the SunFounder Controller APP.
+    在 SunFounder Controller APP 中点击 “+” 图标创建一个新的控制器。
 
     .. image:: img/app1.PNG
 
-    There are preset controllers for some products in the Preset section, which you can use as needed. Here, we select **PiCar-X**.
+    在预设区域中，有一些产品的预设控制器可供选择，您可以根据需要使用。在这里，我们选择 **PiCar-X**。
 
     .. image:: img/app_control_preset.jpg
 
-#. Connect to PiCar-x.
+#. 连接到 PiCar-X。
 
-    When you click the **Connect** button, it will automatically search for robots nearby. Its name is defined in ``picarx_control.py`` and it must be running at all times.
+    点击 **Connect** 按钮后，APP 会自动搜索附近的机器人。其名称在 ``picarx_control.py`` 文件中定义，并且必须始终处于运行状态。
 
     .. image:: img/app9.PNG
     
-    Once you click on the product name, the message "Connected Successfully" will appear and the product name will appear in the upper right corner.
+    点击产品名称后，会出现 “Connected Successfully” 的提示信息，产品名称将显示在右上角。
 
     .. image:: img/app10.PNG
 
     .. note::
 
-        * You need to make sure that your mobile device is connected to the same LAN as PiCar-X.
-        * If it doesn't search automatically, you can also manually enter the IP to connect.
+        * 请确保您的移动设备连接到与 PiCar-X 相同的局域网。
+        * 如果无法自动搜索，您也可以手动输入 IP 地址进行连接。
 
         .. image:: img/app11.PNG
 
-#. Run this controller.
+#. 启动控制器。
 
-    Click the **Run** button to start the controller, you will see the footage of the car shooting, and now you can control your PiCar-X with these widgets.
+    点击 **Run** 按钮启动控制器，您将看到车辆拍摄的画面，现在您可以使用这些控件来操作您的 PiCar-X。
 
     .. image:: img/app12.PNG
     
-    Here are the functions of the widgets.
+    以下是控件的功能说明：
 
-    * **A**: Show the current speed of the car.
-    * **E**: turn on the obstacle avoidance function.
-    * **I**: turn on the line following function.
-    * **J**: voice recognition, press and hold this widget to start speaking, and it will show the recognized voice when you release it. We have set ``forward``, ``backard``, ``left`` and ``right`` 4 commands in the code to control the car.
-    * **K**: Control forward, backward, left, and right motions of the car.
-    * **Q**: turn the head(Camera) up, down, left and right.
-    * **N**: Turn on the color recognition function.
-    * **O**: Turn on the face recognition function.
-    * **P**: Turn on the object recognition function, it can recognize nearly 90 kinds of objects, for the list of models, please refer to: https://github.com/sunfounder/vilib/blob/master/workspace/coco_labels.txt.
-
-
+    * **A**：显示车辆当前速度。
+    * **E**：启动避障功能。
+    * **I**：启动循迹功能。
+    * **J**：语音识别，按住此控件开始讲话，松开后显示识别的语音。代码中设置了 ``forward``、``backward``、``left`` 和 ``right`` 四个命令来控制车辆。
+    * **K**：控制车辆前进、后退、左转和右转。
+    * **Q**：控制摄像头（头部）上下左右移动。
+    * **N**：启动颜色识别功能。
+    * **O**：启动人脸识别功能。
+    * **P**：启动物体识别功能，可识别近 90 种物体，具体模型列表请参考：https://github.com/sunfounder/vilib/blob/master/workspace/coco_labels.txt。

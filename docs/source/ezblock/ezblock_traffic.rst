@@ -1,43 +1,45 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Traffic Sign Detection
-===============================
+交通标志检测
+================================
 
-In addition to color, face detection, PiCar-X can also do traffic sign detection.
+该项目使用图像检测功能来寻找交通标志，
+并使帕克按照标志上的说明进行操作。
+**交通标志检测** 块启动后，将识别以下 PDF 中包含的 4 种不同交通标志模型。
+当帕克检测到 **停止（STOP）** 标志时，它会停下来，
+**向前（FORWARD）** 标志将使其向前行驶，而 **向左（LEFT）** 或 **向右（RIGHT）** 箭头将使其转向该方向。
 
-Now let's combine this traffic sign detection with the line following function. Let PiCar-X track the line, and when you put the Stop sign in front of it, it will stop. When you place a Forward sign in front of it, it will continue to move forward.
+* :download:`[PDF]交通标志卡 <https://gitee.com/sunfounder/sf-pdf/raw/master/%E5%8D%A1%E7%89%87/%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB/%E4%BA%A4%E9%80%9A%E6%A0%87%E5%BF%97%E5%8D%A1.pdf>`
 
-
-**TIPS**
-
-#. PiCar will recognize 4 different traffic sign models included in the printable PDF below. 
-
-    .. image:: img/taffics_sign.png
-
-    * :download:`[PDF]Traffic Sign Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/traffic-sign-cards.pdf>`
-
-#. **Set ref to ()** block is used to set the grayscale threshold, you need to modify it according to the actual situation. You can go ahead and run :ref:`test_grayscale` to see the values of the grayscale module on the white and black surfaces, and fill in their middle values in this block.
-
-
-
-**EXAMPLE**
+.. image:: img/taffics_sign.png
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+    由于打印机碳粉或打印介质（如棕褐色纸）的不同，打印的交通标志颜色可能与 EzBlock 颜色模型的色调略有不同。 这会导致不太准确的颜色识别。
+
+该项目基于 :ref:`矿车` ，但帕克使用一种算法进行交通标志检测，而不是使用灰度传感器。 检测结果可以通过 EzBlock Studio 中的视频监视器查看。
+
+.. image:: img/traffic_detect.PNG
+
+
+**示例**
+
+.. note::
+
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 
 .. image:: img/sp210513_101526.png

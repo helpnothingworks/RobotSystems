@@ -1,27 +1,26 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_line_tracking:
 
-5. Line Tracking
+5. 线路追踪
 ====================================
 
-This project will use the Grayscale module to make the PiCar-X move forward along a line. 
-Use dark-colored tape to make a line as straight as possible, and not too curved. 
-Some experimenting might be needed if the PiCar-X is derailed.
+本项目将使用灰度模块让 PiCar-X 沿着一条线向前移动。使用深色胶带制作一条尽可能直且
+不太弯曲的线路。若 PiCar-X 偏离线路，可能需要进行一些实验调整。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -31,13 +30,13 @@ Some experimenting might be needed if the PiCar-X is derailed.
 
     cd ~/picar-x/example
     sudo python3 5.minecart_plus.py
-    
-After running the code, PiCar-X will move forward along a line.
 
-**Code**
+运行代码后，PiCar-X 将沿着线路向前移动。
+
+**代码**
 
 .. note::
-    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``picar-x/example``. After modifying the code, you can run it directly to see the effect.
+    您可以 **修改/重置/复制/运行/停止** 以下代码。但在此之前，需进入源码路径，例如 ``picar-x/example``。修改代码后，您可以直接运行以查看效果。
 
 .. raw:: html
 
@@ -51,8 +50,8 @@ After running the code, PiCar-X will move forward along a line.
     px = Picarx()
     # px = Picarx(grayscale_pins=['A0', 'A1', 'A2'])
 
-    # Please run ./calibration/grayscale_calibration.py to Auto calibrate grayscale values
-    # or manual modify reference value by follow code
+    # 请运行 ./calibration/grayscale_calibration.py 自动校准灰度值
+    # 或者通过以下代码手动修改参考值
     # px.set_line_reference([1400, 1400, 1400])
 
     current_state = None
@@ -78,7 +77,7 @@ After running the code, PiCar-X will move forward along a line.
         sleep(0.001)
 
     def get_status(val_list):
-        _state = px.get_line_status(val_list)  # [bool, bool, bool], 0 means line, 1 means background
+        _state = px.get_line_status(val_list)  # [bool, bool, bool], 0 表示线路，1 表示背景
         if _state == [0, 0, 0]:
             return 'stop'
         elif _state[1] == 1:
@@ -100,41 +99,41 @@ After running the code, PiCar-X will move forward along a line.
 
                 if gm_state == 'forward':
                     px.set_dir_servo_angle(0)
-                    px.forward(px_power) 
+                    px.forward(px_power)
                 elif gm_state == 'left':
                     px.set_dir_servo_angle(offset)
-                    px.forward(px_power) 
+                    px.forward(px_power)
                 elif gm_state == 'right':
                     px.set_dir_servo_angle(-offset)
-                    px.forward(px_power) 
+                    px.forward(px_power)
                 else:
                     outHandle()
         finally:
             px.stop()
             print("stop and exit")
             sleep(0.1)
-       
 
-**How it works?** 
 
-This Python script controls a Picarx robot car using grayscale sensors for navigation. Here's a breakdown of its main components:
+**工作原理**
 
-* Import and Initialization:
+该 Python 脚本使用灰度传感器控制 Picarx 机器人小车的导航。以下是其主要组成部分的说明：
 
-    The script imports the Picarx class for controlling the robot car and the sleep function from the time module for adding delays.
+* 导入与初始化：
 
-    An instance of Picarx is created, and there's a commented line showing an alternative initialization with specific grayscale sensor pins.
+    脚本导入了控制机器人小车的 Picarx 类以及 time 模块中的 sleep 函数，用于添加延时操作。
+
+    创建了 Picarx 的实例，注释行显示了一个使用特定灰度传感器引脚的初始化方法。
 
     .. code-block:: python
-        
+
         from picarx import Picarx
         from time import sleep
 
         px = Picarx()
 
-* Configuration and Global Variables:
+* 配置与全局变量：
 
-    ``current_state``, ``px_power``, ``offset``, and ``last_state`` are global variables used to track and control the car's movement. ``px_power`` sets the motor power, and ``offset`` is used for adjusting the steering angle.
+    ``current_state`` 、 ``px_power`` 、 ``offset`` 和 ``last_state`` 是用于跟踪和控制小车运动的全局变量。 ``px_power`` 设置电机功率， ``offset`` 用于调整转向角度。
 
     .. code-block:: python
 
@@ -143,11 +142,11 @@ This Python script controls a Picarx robot car using grayscale sensors for navig
         offset = 20
         last_state = "stop"
 
-* ``outHandle`` Function:
+* ``outHandle`` 函数：
 
-    This function is called when the car needs to handle an 'out of line' scenario.
+    当小车需要处理“脱线”情况时调用此函数。
 
-    It adjusts the car's direction based on ``last_state`` and checks the grayscale sensor values to determine the new state.
+    它根据 ``last_state`` 调整小车的方向，并检查灰度传感器值以确定新状态。
 
     .. code-block:: python
 
@@ -168,16 +167,16 @@ This Python script controls a Picarx robot car using grayscale sensors for navig
                     break
             sleep(0.001)
 
-* ``get_status`` Function:
+* ``get_status`` 函数：
 
-    It interprets the grayscale sensor data (``val_list``) to determine the car's navigation state.
+    此函数解释灰度传感器数据（ ``val_list`` ），以确定小车的导航状态。
 
-    The car's state can be 'forward', 'left', 'right', or 'stop', based on which sensor detects the line.
+    根据哪个传感器检测到线路，小车的状态可以是“forward”（前进）、“left”（左转）、“right”（右转）或“stop”（停止）。
 
     .. code-block:: python
-        
+
         def get_status(val_list):
-            _state = px.get_line_status(val_list)  # [bool, bool, bool], 0 means line, 1 means background
+            _state = px.get_line_status(val_list)  # [bool, bool, bool], 0 表示线路，1 表示背景
             if _state == [0, 0, 0]:
                 return 'stop'
             elif _state[1] == 1:
@@ -187,11 +186,11 @@ This Python script controls a Picarx robot car using grayscale sensors for navig
             elif _state[2] == 1:
                 return 'left'
 
-* Main Loop:
+* 主循环：
 
-    The ``while True`` loop continuously checks the grayscale data and adjusts the car's movement accordingly.
+    ``while True`` 循环不断检查灰度数据并相应调整小车的运动。
 
-    Depending on the ``gm_state``, it sets the steering angle and movement direction.
+    根据 ``gm_state``，它设置转向角度和运动方向。
 
     .. code-block:: python
 
@@ -207,25 +206,25 @@ This Python script controls a Picarx robot car using grayscale sensors for navig
 
                     if gm_state == 'forward':
                         px.set_dir_servo_angle(0)
-                        px.forward(px_power) 
+                        px.forward(px_power)
                     elif gm_state == 'left':
                         px.set_dir_servo_angle(offset)
-                        px.forward(px_power) 
+                        px.forward(px_power)
                     elif gm_state == 'right':
                         px.set_dir_servo_angle(-offset)
-                        px.forward(px_power) 
+                        px.forward(px_power)
                     else:
                         outHandle()
 
-* Safety and Cleanup:
+* 安全与清理：
 
-    The ``try...finally`` block ensures the car stops when the script is interrupted or finished.
+    ``try...finally`` 块确保脚本中断或结束时小车能够安全停止。
 
     .. code-block:: python
-        
+
         finally:
         px.stop()
         print("stop and exit")
         sleep(0.1)
 
-In summary, the script uses grayscale sensors to navigate the Picarx robot car. It continuously reads the sensor data to determine the direction and adjusts the car's movement and steering accordingly. The outHandle function provides additional logic for situations where the car needs to adjust its path significantly.
+总结，该脚本利用灰度传感器引导 Picarx 机器人小车沿线路导航。它通过连续读取传感器数据来确定方向，并相应调整小车的运动和转向。 ``outHandle`` 函数为小车在需要大幅调整路径时提供额外逻辑支持。

@@ -1,42 +1,43 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-.. _test_grayscale:
-
-Test Grayscale Module
+测试灰度模块
 ==============================
 
-PiCar-X includes a Grayscale module for implementing line-following, cliff detection, and other fun experiments. The Grayscale module has three detection sensors that will each report a value according to the shade of color detected by the sensor. For example, a sensor reading the shade of pure black will return a value of “0”.
+帕克包含一个灰度模块，用于实现线路跟踪、悬崖检测和其他有趣的实验。 灰度模块具有三个检测传感器，每个传感器将根据传感器检测到的颜色深浅报告一个值。 例如，读取纯黑色阴影的传感器将返回值“0”。
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_115406.png
 
-Use the **Grayscale module** block to read the value of one of the sensors. In the example above, the “A0” sensor is the sensor on the far left of the PiCar-X. Use the drop-down arrow to change the sensor to “A1” (center sensor), or “A2” (far right sensor).
+使用 **灰度模块** 块读取其中一个传感器的值。 在上面的示例中，“A0”传感器是帕克最左侧的传感器。 使用下拉箭头将传感器更改为“A1”（中心传感器）或“A2”（最右侧的传感器）。
 
 .. image:: img/sp210512_120023.png
 
-The program is simplified with a **create list with** block. 
-A **List** is used in the same way as a single **Variable**, 
-but in this case a **List** is more efficient than a single **Variable** because the **Grayscale module** will be reporting more than one sensor value.
-The **create list with** block will create separate **Variables** for each sensor, and put them into a List.
+该程序通过 **建立列表** 块进行了简化。
+**列表** 的使用方式与单个 **变量** 的使用方式相同，
+但在这种情况下， **列表** 比单个 **变量** 更有效，因为 **灰度模块** 将报告多个传感器值。
+**建立列表** 块将为每个传感器创建单独的 **变量** ，并将它们放入一个列表中。
 
-**EXAMPLE**
+**示例**
+
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 .. image:: img/sp210512_120508.png
+
+代码运行后，你将看到调试监视器中打印的3组值，越黑的环境，打印的值越小。

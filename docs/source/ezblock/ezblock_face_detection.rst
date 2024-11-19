@@ -1,50 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Face Detection
+人脸检测
 ======================
 
-In addition to color detection, PiCar-X also includes a face detection function. In the following example the Joystick widget is used to adjust the direction of the camera, and the number of faces will be displayed in the debug monitor.
+除了颜色检测外，帕克还包含人脸检测功能。 在以下示例中，操纵杆小部件用于调整相机的方向，并且调试监视器中将显示面部数量。
 
-For more information on how to use the Video widget, please reference the tutorial on Ezblock video here: :ref:`ezblock:video_latest`.
+.. 有关如何使用视频小部件的更多信息，请在此处参考有关 EzBlock 视频的教程：
+.. `如何使用视频功能？ <https://docs.sunfounder.com/projects/ezblock3/en/latest/use_video.html>`_
 
 .. image:: img/face_detection.PNG
 
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_141947.png
 
-Set the **face detection** widget to **on** to enable facial detection.
+将 **人脸检测** 设置为 **开** 以启用面部检测。
 
 .. image:: img/sp210512_142327.png
 
-These two blocks are used to adjust the orientation of the pan-tilt camera, similar to driving the PiCar-X in the :ref:`ezb_remote_control` tutorial. As the value increases, the camera will rotate to the right, or upwards, a decreasing value will rotate the camera right, or downwards.
+这两个块用于调整云台相机的方向，类似于 :ref:`远程遥控` 教程中的驾驶帕克。 随着值的增加，相机将向右或向上旋转，减小的值将向右或向下旋转相机。
 
 .. image:: img/sp210512_142407.png
 
-The image detection results are given through the of **detected face** block. Use the drop-down menu options to choose between reading the coordinates, size, or number of results from the image detection function.
+图像检测结果通过 **检测人脸** 块给出。 使用下拉菜单选项在从图像检测功能读取坐标、大小或结果数量之间进行选择。
 
 .. image:: img/sp210512_142616.png
 
-Use the **create text with** block to print the combination of **text** and of **detected face** data.
+使用 **建立字串使用** 块来打印 **文本** 和 **检测人脸** 数据的组合。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
 
 .. image:: img/sp210512_142830.png
+
+代码运行后，你将看到摄像头拍摄的画面；若PiCar-X拍摄到人，它将框选出来。

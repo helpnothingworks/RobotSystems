@@ -1,49 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Background Music
+背景音乐
 ======================
 
-In addition to programming the PiCar-X to play sound effects or text-to-speech (TTS), the PiCar-X will also play background music. This project will also use a **Slider** widget for adjusting the music volume. 
+除了对帕克进行编程以播放音效或文字转语音 (TTS) 外，帕克还会播放背景音乐。 该项目还将使用 **滑条** 小部件来调整音乐音量。
 
-* :ref:`ezblock:remote_control_latest`
+.. * `如何使用遥控功能？ <https://docs.sunfounder.com/projects/ezblock3/en/latest/remote.html>`_
 
-For a detailed tutorial on Ezblocks remote control functions, please reference the :ref:`ezb_remote_control` tutorial.
+关于 EzBlock 的遥控功能的详细教程，请参考 :ref:`远程遥控` 教程。
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_152803.png
 
-The **play background music** block will need to be added to the **Start** function. Use the drop-down menu to choose different background music for the PiCar-X to play.
+**播放背景音乐** 块将需要添加到 **开始** 功能。 使用下拉菜单选择不同的背景音乐供帕克播放。
 
 .. image:: img/sp210512_153123.png
 
-The block **set background music volume to** will adjust the volume between the range of 0 to 100.
+**设置背景音乐音量** 块将在 0 到 100 的范围内调整音量。
 
 .. image:: img/sp210512_154708.png
 
-Drag a **Slider** bar from the **Remote Control** page to adjust music volume.
+从 **远程遥控** 页面拖动 **滑条** 栏以调整音乐音量。
 
 .. image:: img/sp210512_154259.png
 
-The **slider [A] get value** block will read the slider value. The example above has slider ‘A’ selected. If there are multiple sliders, use the drop-down menu to select the appropriate one.
+**滑条获取值** 块将读取滑块值。 上面的示例选择了滑块“A”。 如果有多个滑块，请使用下拉菜单选择合适的滑块。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 .. image:: img/sp210512_155406.png
+
+代码运行后，将播放一段背景音乐，你可以用远程控制页面的滑条来调节音量。

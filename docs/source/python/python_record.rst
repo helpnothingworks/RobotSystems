@@ -1,25 +1,25 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_video:
 
-9. Record Video
+9. 视频录制
 ==================
 
-This example will guide you how to use the recording function.
+本示例将指导您如何使用视频录制功能。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -30,22 +30,20 @@ This example will guide you how to use the recording function.
     cd ~/picar-x/example
     sudo python3 9.record_video.py
 
-
-After the code runs, you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the video screen. such as:  ``http://192.168.18.113:9000/mjpg``
+运行代码后，您可以在浏览器中输入 ``http://<您的 IP>:9000/mjpg`` 以查看视频画面，例如： ``http://192.168.18.113:9000/mjpg``
 
 .. image:: img/display.png
 
-Recording can be stopped or started by pressing the keys on the keyboard.
+可以通过键盘按键启动或停止录制。
 
-* Press ``q`` to begin recording or pause/continue, ``e`` to stop recording or save.
-* If you want to exit the program, press ``ctrl+c``.
+* 按下 ``q`` 开始录制或暂停/继续，按下 ``e`` 停止录制并保存。
+* 如果需要退出程序，按 ``ctrl+c`` 。
 
-
-**Code** 
+**代码**
 
 .. code-block:: python
 
-    from time import sleep,strftime,localtime
+    from time import sleep, strftime, localtime
     from vilib import Vilib
     import readchar
     import os
@@ -74,18 +72,18 @@ Recording can be stopped or started by pressing the keys on the keyboard.
 
         print(manual)
         while True:
-            # read keyboard
+            # 读取键盘输入
             key = readchar.readkey()
             key = key.lower()
-            # start,pause
+            # 开始或暂停录制
             if key == 'q':
                 key = None
                 if rec_flag == 'stop':
                     rec_flag = 'start'
-                    # set name
+                    # 设置文件名
                     vname = strftime("%Y-%m-%d-%H.%M.%S", localtime())
                     Vilib.rec_video_set["name"] = vname
-                    # start record
+                    # 开始录制
                     Vilib.rec_video_run()
                     Vilib.rec_video_start()
                     print_overwrite('rec start ...')
@@ -103,7 +101,7 @@ Recording can be stopped or started by pressing the keys on the keyboard.
                 rec_flag = 'stop'
                 Vilib.rec_video_stop()
                 print_overwrite("The video saved as %s%s.avi"%(Vilib.rec_video_set["path"],vname),end='\n')
-            # quit
+            # 退出程序
             elif key == readchar.key.CTRL_C:
                 Vilib.camera_close()
                 print('\nquit')
@@ -114,13 +112,15 @@ Recording can be stopped or started by pressing the keys on the keyboard.
     if __name__ == "__main__":
         main()
 
-**How it works?**
+**工作原理**
 
-Functions related to recording include the following:
+与录制相关的功能包括以下内容：
 
-* ``Vilib.rec_video_run(video_name)`` : Started the thread to record the video. ``video_name`` is the name of the video file, it should be a string.
-* ``Vilib.rec_video_start()``: Start or continue video recording.
-* ``Vilib.rec_video_pause()``: Pause recording.
-* ``Vilib.rec_video_stop()``: Stop recording.
 
-``Vilib.rec_video_set["path"] = f"/home/{username}/Videos/"`` sets the storage location of video files.
+
+* ``Vilib.rec_video_run(video_name)``：启动录制线程。 ``video_name`` 是视频文件的名称，应为字符串格式。
+* ``Vilib.rec_video_start()``：开始或继续录制。
+* ``Vilib.rec_video_pause()``：暂停录制。
+* ``Vilib.rec_video_stop()``：停止录制。
+
+``Vilib.rec_video_set["path"] = f"/home/{username}/Videos/"`` 用于设置视频文件的存储位置。

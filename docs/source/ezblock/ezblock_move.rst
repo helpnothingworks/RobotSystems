@@ -1,59 +1,68 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Move
+移动
 ============
 
-This first project teaches how to program movement actions for the PiCar-X. In this project, the program will tell the PiCar-X to execute five actions in order: “forward”, “backward”, “turn left”, “turn right”, and “stop”.
+.. note:: 
 
-To learn the basic usage of Ezblock Studio, please read through the following two sections:
+    在首页，点击 **示例**，进入示例页面，可以直接打开预设好的示例。 如果您只需要简单地测试这些示例，您只需点击 **运行** 即可让您的产品工作。
+    
+    .. image:: img/examples23.png
 
-* :ref:`ezblock:create_project_latest`
+
+第一个项目教授如何为帕克编程运动动作。 在这个项目中，程序会告诉帕克依次执行五个动作：“前进”、“后退”、“左转”、“右转”和“停止”。
+
+.. 学习EzBlock Studio的基本使用，请通读以下两节：
+
+.. * `EzBlock 快速用户指南 <https://docs.sunfounder.com/projects/ezblock3/en/latest/quick_user_guide_for_ezblock3.html>`_
+
+.. * `如何创建一个新项目？ <https://docs.sunfounder.com/projects/ezblock3/en/latest/create_new.html>`_
 
 
 .. image:: img/move.png
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_113300.png
 
-This block will make the PiCar-X move forward at a speed based on a percentage of available power. In the example below “50” is 50% of power, or half-speed.
+该模块将使帕克以基于可用功率百分比的速度前进。在下面的示例中，“50”是功率的 50%，或者说是半速。
 
 .. image:: img/sp210512_113418.png
 
-This block will make the PiCar-X move backward at a speed based on a percentage of available power.
+该模块将使帕克以基于可用功率百分比的速度向后移动。
 
 .. image:: img/sp210512_113514.png
 
-This block adjusts the orientation of the front wheels. The range is “-45” to ”45”. In the example below, “-30” means the wheels will turn 30° to the left.
+该块调整前轮的方向。 范围是“-45”到“45”。 在下面的示例中，“-30”表示车轮将向左转 30°。
 
 .. image:: img/BLK_Basic_delay.png
     :width: 200
 
-This block will cause a timed break between commands, based on milliseconds. In the example below, the PiCar-X will wait for 1 second (1000 milliseconds) before executing the next command.
+此块将导致命令之间的定时中断，基于毫秒。 在下面的示例中，帕克在执行下一个命令之前将等待 1 秒（1000 毫秒）。
 
 .. image:: img/sp210512_113550.png
 
-This block will bring the PiCar-X to a complete stop.
+该块将使帕克完全停止。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
-
+    代码完成后，点击右下角的“下载&运行”按键，让帕克动起来。
+    
+    .. image:: img/sp211203_100817.png
 
 .. image:: img/sp210512_113827.png
 

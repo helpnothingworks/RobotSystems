@@ -1,71 +1,71 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的无限可能。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：通过社区和团队的帮助，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布和独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
-4. Set up Your Raspberry Pi
+4. 设置您的 Raspberry Pi
 ============================
-If You Have a Screen
+
+如果您有屏幕
 -------------------------
 
-.. note:: The Raspberry Pi ZERO installed on the Robot is not easy to connect to the screen, please use the method without a screen to set it up.
+.. note:: 安装在机器人上的 Raspberry Pi ZERO 不便于连接屏幕，请使用无屏幕的设置方法。
+
+如果您有屏幕，操作 Raspberry Pi 会非常简单。
 
 
-If you have a screen, it will be easy for you to operate on the
-Raspberry Pi.
 
-**Required Components**
+**所需组件**
 
 * Raspberry Pi
-* Power Adapter
-* Micro SD card
-* Screen Power Adapter
-* HDMI cable
-* Screen
-* Mouse
-* Keyboard
+* 电源适配器
+* Micro SD 卡
+* 屏幕电源适配器
+* HDMI 线
+* 屏幕
+* 鼠标
+* 键盘
 
-#. Plug in the Mouse and Keyboard.
+#. 插入鼠标和键盘。
 
-#. Connect the screen to Raspberry Pi's HDMI port and make sure your screen is plugged into a wall socket and switched on.
+#. 将屏幕连接到 Raspberry Pi 的 HDMI 接口，并确保屏幕已插入电源并打开。
 
     .. note::
 
-        If you use a Raspberry Pi 4, you need to connect the screen to the HDMI0 (nearest the power in port).
+        如果您使用的是 Raspberry Pi 4，请将屏幕连接到 HDMI0（靠近电源接口的端口）。
 
-#. Use the power adapter to power the Raspberry Pi.
+#. 使用电源适配器为 Raspberry Pi 供电。
 
-#. After a few seconds, the Raspberry Pi OS desktop will be displayed. Now you can open the Terminal to start entering commands.
+#. 几秒钟后，Raspberry Pi OS 的桌面将显示。现在，您可以打开终端开始输入命令。
 
     .. image:: img/bookwarm.png
         :align: center
 
-If You Have No Screen
+如果您没有屏幕
 --------------------------
 
-If you don't have a monitor, you can remotely log into your Raspberry Pi.
+如果您没有显示器，可以远程登录 Raspberry Pi。
 
-**Required Components**
+**所需组件**
 
 * Raspberry Pi
-* Power Adapter
-* Micro SD card
+* 电源适配器
+* Micro SD 卡
 
-You can apply the SSH command to open the Raspberry Pi's Bash shell. Bash is the standard default shell for Linux. The shell itself is a command (instruction) when the user uses Unix/Linux. Most of what you need to do can be done through the shell.
+您可以使用 SSH 命令打开 Raspberry Pi 的 Bash shell。Bash 是 Linux 的默认标准 shell，用户在使用 Unix/Linux 时主要通过 shell 执行指令。大多数任务都可以通过 shell 完成。
 
-If you're not satisfied with using the command window to access your Raspberry Pi, you can also use the remote desktop feature to easily manage files on your Raspberry Pi using a GUI.
+如果您对使用命令窗口访问 Raspberry Pi 不满意，还可以通过远程桌面功能，使用图形界面（GUI）轻松管理 Raspberry Pi 上的文件。
 
-See below for detailed tutorials for each system.
-
+请参考下方针对不同系统的详细教程：
 
 .. toctree::
 

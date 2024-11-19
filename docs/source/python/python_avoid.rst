@@ -1,26 +1,25 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_avoid:
 
-4. Obstacle Avoidance
+4. 避障功能
 =============================
 
-In this project, PiCar-X will detect obstacles in front of it while moving forward, 
-and when the obstacles are too close, it will change the direction of moving forward.
+在本项目中，PiCar-X 将在向前移动时检测前方障碍物，当障碍物距离过近时，会自动改变前进方向。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -30,20 +29,19 @@ and when the obstacles are too close, it will change the direction of moving for
 
     cd ~/picar-x/example
     sudo python3 4.avoiding_obstacles.py
-    
-After running the code, PiCar-X will walk forward. 
 
-If it detects that the distance of the obstacle ahead is less than 20cm, it will go backward. 
+运行代码后，PiCar-X 将开始向前移动。
 
-If there is an obstacle within 20 to 40cm, it will turn left.
+如果检测到前方障碍物距离小于 20cm，PiCar-X 会倒退。
 
-If there is no obstacle in the direction after turning left or the obstacle distance is greater than 25cm, 
-it will continue to move forward.
+如果检测到障碍物距离在 20 到 40cm 之间，它将向左转弯。
 
-**Code**
+如果左转后方向没有障碍物或障碍物距离大于 25cm，PiCar-X 将继续向前移动。
+
+**代码**
 
 .. note::
-    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to source code path like ``picar-x/example``. After modifying the code, you can run it directly to see the effect.
+    您可以 **修改/重置/复制/运行/停止** 以下代码。但在此之前，需进入源码路径，例如 ``picar-x/example``。修改代码后，您可以直接运行以查看效果。
 
 .. raw:: html
 
@@ -55,14 +53,14 @@ it will continue to move forward.
     import time
     
     POWER = 50
-    SafeDistance = 40   # > 40 safe
-    DangerDistance = 20 # > 20 && < 40 turn around, 
-                        # < 20 backward
+    SafeDistance = 40   # > 40 安全距离
+    DangerDistance = 20 # > 20 && < 40 转弯,
+                        # < 20 倒退
     
     def main():
         try:
             px = Picarx()
-            # px = Picarx(ultrasonic_pins=['D2','D3']) # tring, echo
+            # px = Picarx(ultrasonic_pins=['D2','D3']) # trigger, echo
            
             while True:
                 distance = round(px.ultrasonic.read(), 2)
@@ -86,11 +84,11 @@ it will continue to move forward.
     if __name__ == "__main__":
         main()
 
-**How it works?**
+**工作原理**
 
-* Importing the Picarx Module and Initializing Constants: 
+* 导入 Picarx 模块并初始化常量：
 
-    This section of the code imports the ``Picarx`` class from the ``picarx`` module, which is essential for controlling the Picarx robot. Constants like ``POWER``, ``SafeDistance``, and ``DangerDistance`` are defined, which will be used later in the script to control the robot's movement based on distance measurements.
+    此部分代码从 ``picarx`` 模块中导入 ``Picarx`` 类，这是控制 Picarx 机器人的核心。代码中定义了常量 ``POWER``、 ``SafeDistance`` 和 ``DangerDistance`` ，用于根据距离测量结果控制机器人运动。
 
     .. code-block:: python
 
@@ -98,13 +96,13 @@ it will continue to move forward.
         import time
 
         POWER = 50
-        SafeDistance = 40 # > 40 safe
-        DangerDistance = 20 # > 20 && < 40 turn around,
-        # < 20 backward
+        SafeDistance = 40 # > 40 安全
+        DangerDistance = 20 # > 20 && < 40 转弯,
+        # < 20 倒退
 
-* Main Function Definition and Ultrasonic Sensor Reading:
+* 主函数定义和超声波传感器读取：
 
-    The ``main`` function is where the Picarx robot is controlled. An instance of ``Picarx`` is created, which activates the robot's functionalities. The code enters an infinite loop, constantly reading the distance from the ultrasonic sensor. This distance is used to determine the robot's movement.
+    ``main`` 函数是控制 Picarx 机器人的核心逻辑。代码中创建了 ``Picarx`` 的实例，激活机器人的功能。程序进入无限循环，不断读取超声波传感器的距离数据，并根据数据控制机器人的运动。
 
     .. code-block:: python
         
@@ -114,11 +112,11 @@ it will continue to move forward.
 
             while True:
                 distance = round(px.ultrasonic.read(), 2)
-                # [Rest of the logic]
+                # [其余逻辑]
 
-* Movement Logic Based on Distance:
+* 基于距离的运动逻辑：
 
-    The robot's movement is controlled based on the ``distance`` read from the ultrasonic sensor. If the ``distance`` is greater than ``SafeDistance``, the robot moves forward. If the distance is between ``DangerDistance`` and ``SafeDistance``, it slightly turns and moves forward. If the ``distance`` is less than ``DangerDistance``, the robot reverses while turning in the opposite direction.
+    根据超声波传感器读取的 ``distance`` 值控制机器人运动。如果 ``distance`` 大于 ``SafeDistance``，机器人向前移动；如果在 ``DangerDistance`` 和 ``SafeDistance`` 之间，机器人略微转向后前进；如果小于 ``DangerDistance``，机器人倒退并转向。
 
     .. code-block:: python
 
@@ -134,24 +132,24 @@ it will continue to move forward.
             px.backward(POWER)
             time.sleep(0.5)
 
-* Safety and Cleanup with the 'finally' Block:
+* 使用 'finally' 块保障安全：
 
-    The ``try...finally`` block ensures safety by stopping the robot's motion in case of an interruption or error. This is a crucial part for preventing uncontrollable behavior of the robot.
+    ``try...finally`` 块确保在程序中断或出现错误时停止机器人的动作，这是防止机器人失控的重要措施。
 
     .. code-block:: python
         
         try:
-        # [Control logic]
+        # [控制逻辑]
         finally:
         px.forward(0)
 
-* Execution Entry Point:
+* 脚本的执行入口：
 
-    The standard Python entry point ``if __name__ == "__main__":`` is used to run the main function when the script is executed as a standalone program.
+    使用标准的 Python 入口点 ``if __name__ == "__main__":``，在脚本作为独立程序运行时执行主函数。
 
     .. code-block:: python
         
         if name == "main":
             main()
 
-In summary, the script uses the Picarx module to control a robot, utilizing an ultrasonic sensor for distance measurement. The robot's movement is adapted based on these measurements, ensuring safe operation through careful control and a safety mechanism in the finally block.
+总结，代码通过 Picarx 模块控制机器人，利用超声波传感器测量距离，根据测量结果调整机器人的运动方向，并通过 ``finally`` 块确保安全运行。

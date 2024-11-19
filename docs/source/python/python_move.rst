@@ -1,25 +1,25 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_move:
 
-1. Let PiCar-X Move
+1. 让 PiCar-X 动起来
 ========================
 
-This is the first project, let’s test the basic movement of Picar-X.
+这是第一个项目，让我们测试一下 PiCar-X 的基本移动功能。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -30,12 +30,12 @@ This is the first project, let’s test the basic movement of Picar-X.
     cd ~/picar-x/example
     sudo python3 1.move.py
 
-After running the code, PiCar-X will move forward, turn in an S-shape, stop and shake its head. 
+运行代码后，PiCar-X 将向前移动，按照 S 形转向，停止并摇动“头部”。
 
-**Code**
+**代码**
 
 .. note::
-    You can **Modify/Reset/Copy/Run/Stop** the code below. But before that, you need to go to  source code path like ``picar-x/example``. After modifying the code, you can run it directly to see the effect.
+    您可以 **修改/重置/复制/运行/停止** 以下代码。但在此之前，需进入源码路径，例如 ``picar-x/example``。修改代码后，您可以直接运行以查看效果。
 
 .. raw:: html
 
@@ -86,14 +86,14 @@ After running the code, PiCar-X will move forward, turn in an S-shape, stop and 
         finally:
             px.forward(0)
 
-**How it works?**
+**工作原理**
 
-The basic functionality of PiCar-X is in the ``picarx`` module,
-Can be used to control steering gear and wheels,
-and will make the PiCar-X move forward, turn in an S-shape, or shake its head. 
+PiCar-X 的基本功能由 ``picarx`` 模块提供，
+可用于控制方向舵机和车轮，
+实现 PiCar-X 前进、S 形转向或摇头等动作。
 
-Now, the libraries to support the basic functionality of PiCar-X are imported. 
-These lines will appear in all the examples that involve PiCar-X movement.
+以下代码引入了支持 PiCar-X 基本功能的库。
+这些行代码会出现在涉及 PiCar-X 移动的所有示例中。
 
 .. code-block:: python
     :emphasize-lines: 0
@@ -101,8 +101,8 @@ These lines will appear in all the examples that involve PiCar-X movement.
     from picarx import Picarx
     import time
 
-The following function with the ``for`` loop is then used to make PiCar-X 
-move forward, change directions, and move the camera's pan/tilt.
+接下来的代码使用 ``for`` 循环，使 PiCar-X
+向前移动、改变方向，并操控摄像头的云台角度。
 
 .. code-block:: python
 
@@ -111,10 +111,10 @@ move forward, change directions, and move the camera's pan/tilt.
     px.set_camera_servo1_angle(angle)
     px.set_camera_servo2_angle(angle)
 
-* ``forward()``: Orders the PiCar-X go forward at a given ``speed``.
-* ``set_dir_servo_angle``: Turns the Steering servo to a specific ``angle``.
-* ``set_cam_pan_angle``: Turns the Pan servo to a specific ``angle``.
-* ``set_cam_tilt_angle``: Turns the Tilt servo to a specific ``angle``.
+* ``forward()`` : 以指定的 ``speed`` 让 PiCar-X 前进。
+* ``set_dir_servo_angle`` : 将方向舵机转至指定的 ``angle`` 。
+* ``set_cam_pan_angle`` : 将云台的水平舵机转至指定的 ``angle`` 。
+* ``set_cam_tilt_angle`` : 将云台的垂直舵机转至指定的 ``angle`` 。
 
 .. image:: img/pan_tilt_servo.png
     :width: 400

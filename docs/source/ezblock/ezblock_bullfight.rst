@@ -1,50 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Bullfight
+斗牛
 ==============
 
-Turn PiCar-X into an angry bull! Prepare a red cloth, such as a handkerchief, and become a Bullfighter. When the PiCar-X chases after the red cloth, be careful not to get hit! 
+将帕克变成愤怒的公牛！准备一块红布，如手帕，成为一名斗牛士。 帕克追红布的时候注意不要被撞到！
 
 .. note::
 
-    This project is more advanced than the preceding projects. The PiCar-X will need to use the color detection function to keep the camera facing towards the red cloth, then the body orientation will need to automatically adjust in response to the direction that the camera is facing.
+    这个项目比前面的项目更进阶。 帕克需要使用颜色检测功能让相机保持朝向红布，然后身体方向需要根据相机朝向的方向自动调整。
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_174650.png
 
-Begin with adding the **color detection [red]** block to the **Start** widget to make the PiCar-X look for a red-colored object. In the forever loop, add the **[width] of detected color** block to transform the input into an “object detection” grid. 
+首先将 **颜色检测[红色]** 块添加到 **开始** 小部件，以使帕克寻找红色对象。 在永久循环中，添加 **颜色检测的[宽度]** 块以将输入转换为 ``对象检测`` 网格。
 
 .. image:: img/sp210512_174807.png
 
-The “object detection” will output the detected coordinates in (x, y) values, 
-based on the center point of the camera image. 
-The screen is divided into a 3x3 grid, as shown below, 
-so if the red cloth is kept in the top left of the cameras’ image, the (x, y) coordinates will be (-1, 1).
+``对象检测`` 将以 (x, y) 值输出检测到的坐标，
+基于相机图像的中心点。
+屏幕被分成3x3的网格，如下图，
+因此，如果红布保持在相机图像的左上角，则 (x, y) 坐标将为 (-1, 1)。
 
 .. image:: img/sp210512_174956.png
 
-The “object detection” will detect the Width and Height of the graphic. 
-If multiple targets are identified, the dimensions of the largest target will be recorded.
+``对象检测`` 将检测图形的宽度和高度。
+如果识别出多个目标，则记录最大目标的尺寸。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 .. image:: img/sp210512_175519.png
     :width: 800
+
+代码运行后，你就可以用一块红布或红球来让小车跟着走。

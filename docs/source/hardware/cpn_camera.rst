@@ -1,57 +1,54 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
-Camera Module
+摄像头模块
 ====================================
 
-
-**Description**
+**描述**
 
 .. image:: img/camera_module_pic.png
    :width: 200
    :align: center
 
-This is a 5MP Raspberry Pi camera module with OV5647 sensor. It's plug and play, connect the included ribbon cable to the CSI (Camera Serial Interface) port on your Raspberry Pi and you're ready to go.
+这是一个 5MP 的 Raspberry Pi 摄像头模块，搭载 OV5647 传感器。它支持即插即用，只需将附带的排线连接到 Raspberry Pi 的 CSI（摄像头串行接口）端口，即可开始使用。
 
-The board is small, about 25mm x 23mm x 9mm, and weighs 3g, making it ideal for mobile or other size and weight-critical applications. The camera module has a native resolution of 5 megapixels and has an on-board fixed focus lens that captures still images at 2592 x 1944 pixels, and also supports 1080p30, 720p60 and 640x480p90 video.
+该模块尺寸小巧，仅约 25mm x 23mm x 9mm，重量仅 3g，非常适合移动或其他对尺寸和重量敏感的应用。摄像头模块的原生分辨率为 500 万像素，配备板载定焦镜头，可拍摄 2592 x 1944 像素的静态图像，同时支持 1080p30、720p60 和 640x480p90 的视频录制。
 
 .. note:: 
 
-   The module is only capable of capturing pictures and videos, not sound.
+   该模块只能拍摄照片和视频，无法录制声音。
+
+**规格**
+
+* **静态图像分辨率**：2592×1944 
+* **支持的视频分辨率**：1080p/30 fps、720p/60 fps 和 640x480p 60/90 视频录制 
+* **光圈 (F)**：1.8 
+* **视角**：65 度 
+* **尺寸**：24mm x 23.5mm x 8mm 
+* **重量**：3g 
+* **接口**：CSI 连接器 
+* **支持的操作系统**：Raspberry Pi OS（推荐使用最新版本）
 
 
 
-**Specification**
-
-* **Static Images Resolution**: 2592×1944 
-* **Supported Video Resolution**: 1080p/30 fps, 720p/ 60fps and 640 x480p 60/90 video recording 
-* **Aperture (F)**: 1.8 
-* **Visual Angle**: 65 degree 
-* **Dimension**: 24mmx23.5mmx8mm 
-* **Weight**: 3g 
-* **Interface**: CSI connector 
-* **Supported OS**: Raspberry Pi OS(latest version recommended) 
+**安装摄像头模块**
 
 
+在摄像头模块或 Raspberry Pi 上，您会发现一个扁平的塑料连接器。小心地将黑色固定开关拉出，
+直到部分拉开。按图示方向将 FFC 排线插入塑料连接器，然后将固定开关推回到原位。
 
-**Assemble the Camera Module**
-
-
-On the camera module or Raspberry Pi, you will find a flat plastic connector. Carefully pull out the black fixing switch until the fixing switch is partially pulled out. Insert the FFC cable into the plastic connector in the direction shown and push the fixing switch back into place.
-
-If the FFC wire is installed correctly, it will be straight and will not pull out when you gently pull on it. If not, reinstall it again.
-
+如果 FFC 排线正确安装，它会保持平直，并且在轻拉时不会松脱。如果未正确安装，请重新插入。
 
 .. image:: img/connect_ffc.png
 .. image:: img/1.10_camera.png
@@ -59,7 +56,7 @@ If the FFC wire is installed correctly, it will be straight and will not pull ou
 
 .. warning::
 
-   Do not install the camera with the power on, it may damage your camera.
+   请勿在通电状态下安装摄像头，否则可能会损坏摄像头。
 
 .. **Enable the Camera Interface**
 

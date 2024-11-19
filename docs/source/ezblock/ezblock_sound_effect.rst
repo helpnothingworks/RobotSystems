@@ -1,50 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Sound Effect
-===============================
+音效
+================================
 
-PiCar-X has a built-in speaker that can be used for audio experiments. Ezblock allows users to enter text to make the PiCar-X speak, or make specific sound effects. In this tutorial, the PiCar-X will make the sound of a gun firing after a 3-second countdown, using a do/while function.
+帕克内置扬声器，可用于音频实验。 EzBlock 允许用户输入文字让帕克说话，或制作特定的声音效果。 在本教程中，帕克将使用 **重复多次** 函数，在 3 秒倒计时后发出枪声。
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_144106.png
 
-Use the **say** block with a **text** block to write a sentence for the PiCar-X to say. The **say** block can be used with text or numbers.
+使用 **说** 块和 **文本** 块来写一个句子让帕克说。 **说** 块可用于文本或数字。
 
 .. image:: img/sp210512_144150.png
 
-The **number** block.
+这是一个 **数字** 块。
 
 .. image:: img/sp210512_144216.png
 
-Using the **repeat** block will repeatedly execute the same statement, which reduces the size of the code.
+使用 **重复** 块将重复执行相同的语句，从而减少代码的长度。
 
 .. image:: img/sp210512_144418.png
 
-The **mathematical operation** block can perform typical mathematical functions, such as ”+”, “-”, “x”, and “÷ “.
+**数学运算** 块可以执行典型的数学函数，例如“+”、“-”、“x”和“÷”。
 
 .. image:: img/sp210512_144530.png
 
-The play **sound effects - with volume - %** block has preset sound effects, such as a siren sound, a gun sound, and others. The range of the volume can be set from 0 to 100.
+**播放音效** 块可以播放预设音效，例如警笛声、枪声等。 音量范围可设置为 0 到 100。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
 
 
 .. image:: img/sp210512_144944.png

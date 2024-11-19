@@ -1,57 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-.. _ezb_remote_control:
+远程遥控
+========================
 
-Remote Control
-=======================
+该项目将教授如何使用操纵杆小部件远程控制帕克。
+注意：从远程控制页面拖放操纵杆小部件后，使用“映射”功能校准操纵杆 X 轴和 Y 轴读数。 
 
-This project will teach how to remotely control the PiCar-X with the Joystick widget. 
-Note: After dragging and dropping the Joystick widget from the Remote Control page, use the “Map” function to calibrate the Joysticks X-axis and Y-axis readings. For more information on the Remote Control function, please reference the following link:
+.. 有关远程控制功能的更多信息，请参考以下链接：
 
-
-* :ref:`ezblock:remote_control_latest`
-
+.. * `如何使用遥控功能？ <https://docs.sunfounder.com/projects/ezblock3/en/latest/remote.html>`_
 
 .. image:: img/remote_control23.png
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_114004.png
 
-To use the remote control function, open the Remote Control page from the left side of the main page.
+要使用远程控制功能，请从主页面左侧打开远程控制页面。
 
 .. image:: img/sp210512_114042.png
 
-Drag a Joystick to the central area of the Remote Control page. Toggling the white point in the center, and gently dragging in any direction will produce an (X,Y) coordinate. The range of the X-axis or Y-axis is defaulted to “-100” to “100”. Toggling the white point and dragging it directly to the far left of the Joystick will result in an X value of “-100” and a Y value of “0”.
+将操纵杆拖动到远程控制页面的中央区域。 切换中心的白点，并在任何方向轻轻拖动将产生 (X,Y) 坐标。 X 轴或 Y 轴的范围默认为“-100”到“100”。 切换白点并将其直接拖动到操纵杆的最左侧将导致 X 值为“-100”，Y 值为“0”。
 
 .. image:: img/sp210512_114136.png
 
-After dragging and dropping a widget on the remote control page, a new category-Remote with the above block will appear.
-This block reads the Joystick value in the Remote Control page. You can click the drop-down menu to switch to the Y-axis reading.
+在遥控器页面拖放一个小部件后，积木块栏会出现一个新的分类-远程遥控，上面会更新出新的块。
+此块读取远程控制页面中的操纵杆值。 您可以单击下拉菜单切换到 Y 轴读数。
 
 .. image:: img/sp210512_114235.png
 
-The map value block can remap a number from one range to another. If the range is set to 0 to 100, and the map value number is 50, then it is at a 50% position of the range, or “50”. If the range is set to 0 to 255 and the map value number is 50, then it is at a 50% position of the range, or “127.5”.
+映射值块可以将数字从一个范围重新映射到另一个范围。 如果范围设置为 0 到 100，并且映射值为 50，则它位于范围的 50% 位置，即“50”。 如果范围设置为 0 到 255，并且映射值为 50，则它位于范围的 50% 位置，即“127.5”。
 
-**EXAMPLE**
+**示例**
+
+
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
-
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
 
 .. image:: img/sp210512_114416.png
 
+代码运行后，进入到远程控制页面，就可以使用摇杆来控制PiCar-X的移动。

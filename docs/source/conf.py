@@ -138,7 +138,7 @@ rst_epilog = """
 
 .. |link_sf_facebook| raw:: html
 
-    <a href="https://bit.ly/raphaelkit " target="_blank">here</a>
+    <a href="https://bit.ly/raphaelkit " target="_blank">这里</a>
 
 .. |link_robot_hat| raw:: html
 
@@ -167,6 +167,10 @@ rst_epilog = """
 .. |link_it_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/picar-x-v20/it/latest/" target="_blank">Tutorial online in italiano</a>
+
+.. |link_cn_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/picar-x-v20/cn/latest/" target="_blank">中文在线课程</a>
 
 .. |link_PiCar-X_kit| raw:: html
 

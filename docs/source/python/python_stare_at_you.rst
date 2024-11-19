@@ -1,30 +1,29 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_stare:
 
-8. Stare at You
+8. 注视你
 ==========================================
 
-This project is also based on the :ref:`py_computer_vision` project, 
-with the addition of face detection algorithms.
+本项目基于 :ref:`py_computer_vision` 项目，增加了人脸检测算法。
 
-When you appear in front of the camera, it will recognize your face and adjust its gimbal to keep your face in the center of the frame.
+当您出现在摄像头前时，它会识别您的脸部，并调整云台将您的脸保持在画面的中心。
 
-You can view the screen at ``http://<your IP>:9000/mjpg``.
+您可以通过浏览器访问 ``http://<您的 IP>:9000/mjpg`` 查看画面。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -35,9 +34,9 @@ You can view the screen at ``http://<your IP>:9000/mjpg``.
     cd ~/picar-x/example
     sudo python3 8.stare_at_you.py
 
-When the code is run, the car's camera will always be staring at your face.
+代码运行后，小车的摄像头将始终注视着您的脸。
 
-**Code**
+**代码**
 
 .. code-block:: python
 
@@ -61,7 +60,7 @@ When the code is run, the car's camera will always be staring at your face.
                 coordinate_x = Vilib.detect_obj_parameter['human_x']
                 coordinate_y = Vilib.detect_obj_parameter['human_y']
                 
-                # change the pan-tilt angle for track the object
+                # 调整云台角度以跟踪目标
                 x_angle +=(coordinate_x*10/640)-5
                 x_angle = clamp_number(x_angle,-35,35)
                 px.set_cam_pan_angle(x_angle)
@@ -78,16 +77,16 @@ When the code is run, the car's camera will always be staring at your face.
 
     if __name__ == "__main__":
         try:
-        main()
+            main()
         
         finally:
             px.stop()
             print("stop and exit")
             sleep(0.1)
 
-**How it works?**
+**工作原理**
 
-These lines of code in ``while True`` make the camera follow the face.
+以下代码段位于 ``while True`` 循环中，用于使摄像头跟踪人脸。
 
 .. code-block:: python
 
@@ -96,7 +95,7 @@ These lines of code in ``while True`` make the camera follow the face.
             coordinate_x = Vilib.detect_obj_parameter['human_x']
             coordinate_y = Vilib.detect_obj_parameter['human_y']
             
-            # change the pan-tilt angle for track the object
+            # 调整云台角度以跟踪目标
             x_angle +=(coordinate_x*10/640)-5
             x_angle = clamp_number(x_angle,-35,35)
             px.set_cam_pan_angle(x_angle)
@@ -105,16 +104,16 @@ These lines of code in ``while True`` make the camera follow the face.
             y_angle = clamp_number(y_angle,-35,35)
             px.set_cam_tilt_angle(y_angle)
 
-1. Check if there is a detected human face
+1. 检查是否检测到人脸。
 
     .. code-block:: python
 
         Vilib.detect_obj_parameter['human_n'] != 0
 
-2. If a human face is detected, obtain the coordinates ( ``coordinate_x`` and ``coordinate_y`` ) of the detected face.
+2. 如果检测到人脸，获取人脸的坐标（ ``coordinate_x`` 和 ``coordinate_y``）。
 
-3. Calculate new pan and tilt angles ( ``x_angle`` and ``y_angle`` ) based on the detected face's position and adjust them to follow the face.
+3. 根据检测到的人脸位置计算新的云台水平和垂直角度（ ``x_angle`` 和 ``y_angle``），并进行调整以跟随人脸。
 
-4. Limit the pan and tilt angles within the specified range using the ``clamp_number`` function.
+4. 使用 ``clamp_number`` 函数限制云台角度在指定范围内。
 
-5. Set the camera's pan and tilt angles using ``px.set_cam_pan_angle()`` and ``px.set_cam_tilt_angle()`` .
+5. 使用 ``px.set_cam_pan_angle()`` 和 ``px.set_cam_tilt_angle()`` 设置摄像头的云台角度。

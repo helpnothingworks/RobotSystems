@@ -1,23 +1,23 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
-6. Enable I2C Interface(Important)
+6. 启用 I2C 接口（重要）
 ========================================
 
-We will be using the Raspberry Pi's I2C interface. This interface should have been enabled when installing the ``robot-hat`` module earlier. To ensure everything is in order, let's check if it is indeed enabled.
+我们将使用 Raspberry Pi 的 I2C 接口。在之前安装 ``robot-hat`` 模块时应该已经启用了该接口。为了确保一切正常，让我们检查是否已正确启用。
 
-#. Input the following command:
+#. 输入以下命令：
 
     .. raw:: html
 
@@ -27,22 +27,22 @@ We will be using the Raspberry Pi's I2C interface. This interface should have be
 
         sudo raspi-config
 
-#. Choose **Interfacing Options** by press the down arrow key on your keyboard, then press the **Enter** key.
+#. 使用键盘上的向下箭头选择 **Interfacing Options**，然后按下 **Enter** 键。
 
     .. image:: img/image282.png
         :align: center
 
-#. Then **I2C**.
+#. 然后选择 **I2C**。
 
     .. image:: img/image283.png
         :align: center
 
-#. Use the arrow keys on the keyboard to select **<Yes>** -> **<OK>** to complete the setup of the I2C.
+#. 使用键盘上的箭头键选择 **<Yes>** -> **<OK>**，完成 I2C 设置。
 
     .. image:: img/image284.png
         :align: center
 
-#. After you select **<Finish>**, a pop-up will remind you that you need to reboot for the settings to take effect, select **<Yes>**.
+#. 选择 **<Finish>** 后，会弹出一个提示，提醒您需要重新启动以使设置生效，选择 **<Yes>**。
 
     .. image:: img/camera_enable2.png
         :align: center

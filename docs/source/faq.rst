@@ -1,44 +1,44 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的乐趣。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能。
+    - **独家预览**：抢先获取新产品发布信息和独家预览。
+    - **专属折扣**：享受新品的独家优惠。
+    - **节日活动与赠品**：参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入！
 
-FAQ
+常见问题解答
 ===========================
 
-Q1: After installing Ezblock OS, the servo can't turn to 0°?
+问1：安装 Ezblock OS 后，舵机无法转到 0°？
 -------------------------------------------------------------------
 
-1) Check if the servo cable is properly connected and if the Robot HAT power is on.
-2) Press Reset button.
-3) If you have already run the program in Ezblock Studio, the custom program for P11 is no longer available. You can refer to the picture below to manually write a program in Ezblock Studio to set the servo angle to 0.
+1) 检查舵机线缆是否正确连接，并确保 Robot HAT 已通电。
+2) 按下重置按钮。
+3) 如果您已经在 Ezblock Studio 中运行了程序，则 P11 的自定义程序可能无法使用。您可以参考下图，在 Ezblock Studio 中手动编写一个程序，将舵机角度设置为 0。
 
 .. image:: img/faq_servo.png
 
-Q2: When using VNC, I am prompted that the desktop cannot be displayed at the moment?
+问2：使用 VNC 时，提示当前无法显示桌面？
 --------------------------------------------------------------------------------------------
 
-In Terminal, type ``sudo raspi-config`` to change the resolution.
+在终端中输入 ``sudo raspi-config``，然后更改分辨率设置。
 
-Q3: Why does the servo sometimes return to the middle position for no reason?
+问3：为什么舵机有时会莫名返回到中间位置？
 ------------------------------------------------------------------------------------
 
-When the servo is blocked by a structure or other object and cannot reach its intended position, the servo will enter the power-off protection mode in order to prevent the servo from being burned out by too much current.
+当舵机被结构或其他物体阻挡，无法到达目标位置时，为防止因电流过大烧毁舵机，舵机会进入断电保护模式。
 
-After a period of power failure, if no PWM signal is given to the servo, the servo will automatically return to its original position.
+经过一段时间的断电保护，如果未向舵机发送 PWM 信号，舵机会自动返回初始位置。
 
-Q4: About the Robot HAT Detailed Tutorial?
+问4：关于 Robot HAT 的详细教程？
 -----------------------------------------------------
 
-You can find a comprehensive tutorial about the Robot HAT here, including information on its hardware and API.
+您可以在此找到有关 Robot HAT 的完整教程，包括硬件信息和 API 使用说明。
 
 * |link_robot_hat|

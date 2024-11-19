@@ -1,24 +1,23 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
 .. _install_all_modules:
 
-
-5. Install All the Modules(Important)
+5. 安装所有模块（重要）
 ========================================
 
-Make sure you are connected to the Internet and update your system:
+确保您的设备已连接互联网并更新系统：
 
 .. raw:: html
 
@@ -31,7 +30,7 @@ Make sure you are connected to the Internet and update your system:
 
 .. note::
 
-    Python3 related packages must be installed if you are installing the Lite version OS.
+    如果您使用的是 Lite 版本的操作系统，必须安装与 Python3 相关的包。
 
     .. raw:: html
 
@@ -42,7 +41,7 @@ Make sure you are connected to the Internet and update your system:
         sudo apt install git python3-pip python3-setuptools python3-smbus
 
 
-Install ``robot-hat``.
+安装 ``robot-hat`` 模块。
 
 .. raw:: html
 
@@ -56,7 +55,7 @@ Install ``robot-hat``.
     sudo python3 setup.py install
 
 
-Then download and install the ``vilib`` module.
+然后下载并安装 ``vilib`` 模块。
 
 .. raw:: html
 
@@ -69,7 +68,7 @@ Then download and install the ``vilib`` module.
     cd vilib
     sudo python3 install.py
 
-Download and install the ``picar-x`` module.
+下载并安装 ``picar-x`` 模块。
 
 .. raw:: html
 
@@ -82,9 +81,9 @@ Download and install the ``picar-x`` module.
     cd picar-x
     sudo python3 setup.py install
 
-This step will take a little while, so please be patient.
+这一步可能需要一些时间，请耐心等待。
 
-Finally, you need to run the script ``i2samp.sh`` to install the components required by the i2s amplifier, otherwise the picar-x will have no sound.
+最后，您需要运行脚本 ``i2samp.sh`` 来安装 i2s 放大器所需的组件，否则 picar-x 将无法发出声音。
 
 .. raw:: html
 
@@ -97,15 +96,15 @@ Finally, you need to run the script ``i2samp.sh`` to install the components requ
 	
 .. image:: img/i2s.png
 
-Type ``y`` and press enter to continue running the script.
+输入 ``y`` 并按回车以继续运行脚本。
 
 .. image:: img/i2s2.png
 
-Type ``y`` and press enter to run ``/dev/zero`` in the background.
+输入 ``y`` 并按回车以在后台运行 ``/dev/zero``。
 
 .. image:: img/i2s3.png
 
-Type ``y`` and press enter to restart the Picar-X.
+输入 ``y`` 并按回车以重启 Picar-X。
 
 .. note::
-    If there is no sound after restarting, you may need to run the i2samp.sh script several times.
+    如果重启后仍然没有声音，您可能需要多次运行 i2samp.sh 脚本。

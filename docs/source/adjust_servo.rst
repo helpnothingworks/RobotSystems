@@ -1,37 +1,34 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能。
+    - **独家预览**：抢先获取新产品发布信息和独家预览。
+    - **专属折扣**：享受新品的独家优惠。
+    - **节日活动与赠品**：参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入！
 
-Adjust Servo for Assembly
+调整舵机以便组装
 ==========================
 
-Before assembling the servo, it is essential to set the angle to zero. Since servo motors have a limited range of motion, setting the angle to zero degrees ensures that the servo starts in its initial position and avoids exceeding its range when powered on. Failing to set the servo to zero beforehand may cause it to attempt to move beyond its allowed range when powered, potentially damaging both the servo and the mechanical system it's attached to. This step is crucial to guarantee safe and proper operation of the servo motor.
+在组装舵机之前，必须将其角度设置为零。由于舵机的运动范围有限，将角度设置为零度可以确保舵机从初始位置开始运行，避免在通电时超出其运动范围。如果未提前将舵机设置为零度，可能会导致舵机尝试超出允许范围运动，从而损坏舵机及其连接的机械系统。此步骤至关重要，以确保舵机安全并正常运行。
 
 .. image:: img/IMG_9897.png
 
-
-For Python Users
+对于 Python 用户
 -----------------------
 
-Refer to :ref:`quick_guide_python` to complete the installation of Raspberry Pi OS and adjust the servo angles.
+请参考 :ref:`quick_guide_python` 完成 Raspberry Pi OS 的安装并调整舵机角度。
 
-
-For Ezblock Users
+对于 Ezblock 用户
 -------------------------
 
 .. note::
 
-    If you are using a Raspberry Pi 5, our graphical programming software, EzBlock, is not supported.
+    如果您使用的是 Raspberry Pi 5，EzBlock 图形化编程软件不支持该版本。
 
-
-Once you have installed the Ezblock system, the P11 pin can be used to adjust the servo. For more details, please refer to :ref:`ezb_servo_adjust`.
+安装 EzBlock 系统后，可以使用 P11 引脚调整舵机角度。更多详情请参考 :ref:`servo_adjust` 。

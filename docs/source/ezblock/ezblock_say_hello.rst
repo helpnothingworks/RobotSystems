@@ -1,44 +1,45 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Say Hello
-===================
+问好
+====================
 
-This project will combine several functions from the preceding projects. The PiCar-X movement will be remotely controlled, and the PiCar’s camera will be remotely controlled by using two joystick controllers. When PiCar recognizes someone's face, it will nod politely and then say “Hello!”.
+这个项目将结合前面项目的几个功能。 帕克运动将被远程控制，帕克的相机将通过使用两个操纵杆控制器进行远程控制。 当帕克认出某人的脸时，它会礼貌地点点头，然后说“你好！”。
 
-* :ref:`ezblock:video_latest`
-* :ref:`ezblock:remote_control_latest`
+.. * `如何使用视频功能 <https://docs.sunfounder.com/projects/ezblock3/en/latest/use_video.html>`_
+.. * `如何使用遥控功能 <https://docs.sunfounder.com/projects/ezblock3/en/latest/remote.html>`_
+
 
 .. image:: img/how_are_you.jpg
 
 
-**TIPS**
+**提示**
 
 .. image:: img/sp210512_161525.png
 
-The **if do** block is used to nod politely once the conditional judgment of “if” is true.
+**如果-执行** 块使在 **如果** 的条件判断为真时执行些功能。
 
 .. image:: img/sp210512_161749.png
 
-The **conditional statements** block is used in conjunction with the **if do** block. The conditions can be “=”, “>”, “<”, ” ≥ “, ” ≤ “, or ” ≠ “.
+**条件语句** 块需要与 **如果-执行** 块结合使用。 条件可以是“=”、“>”、“<”、“≥”、“≤”或“≠”。
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
 
 
 .. image:: img/sp210512_162305.png
+

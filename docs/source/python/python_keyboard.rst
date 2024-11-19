@@ -1,27 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_keyboard_control:
 
-2. Keyboard Control
+2. 键盘控制
 ================================
 
 
-In this project, we will learn how to use the keyboard to remotely control the PiCar-X. 
-You can control the PiCar-X to move forward, backward, left, and right.
+在本项目中，我们将学习如何使用键盘远程控制 PiCar-X。您可以通过键盘控制 PiCar-X 
+前进、后退、左转和右转。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -32,19 +32,19 @@ You can control the PiCar-X to move forward, backward, left, and right.
     cd ~/picar-x/example
     sudo python3 2.keyboard_control.py
 
-Press keys on keyboard to control PiCar-X! 
+使用键盘按键控制 PiCar-X！ 
 
-    * w: Forward 
-    * a: Turn left 
-    * s: Backward 
-    * d: Turn right
-    * i: Head up
-    * k: Head down
-    * j: Turn head left
-    * l: Turn head right     
-    * ctrl + c: Press twice to exit the program
+    * w: 前进 
+    * a: 左转 
+    * s: 后退 
+    * d: 右转
+    * i: 抬头
+    * k: 低头
+    * j: 左转头
+    * l: 右转头     
+    * ctrl + c: 按两次退出程序
 
-**Code**
+**代码**
 
 .. code-block:: python
 
@@ -126,12 +126,10 @@ Press keys on keyboard to control PiCar-X!
             px.stop()
             sleep(.2)
 
+**工作原理**
 
-**How it works?**
-
-PiCar-X should take appropriate action based on the keyboard characters read. 
-The ``lower()`` function converts upper case characters into lower case characters, 
-so that the letter remains valid regardless of case.
+PiCar-X 会根据读取的键盘输入采取相应动作。 
+``lower()`` 函数将大写字母转换为小写字母，以确保无论输入大小写字母都能正确识别。
 
 .. code-block:: python
 

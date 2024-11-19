@@ -1,33 +1,30 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者 Facebook 社区！与志同道合的朋友一起深入探索 Raspberry Pi、Arduino 和 ESP32 的无限可能。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：社区和团队为您解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能。
+    - **独家预览**：抢先获取新产品发布和独家预览。
+    - **专属折扣**：享受新品的独家优惠。
+    - **节日活动与赠品**：参与节日促销和免费赠品活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|]，立即加入！
 
 .. _py_tts:
 
-3. Text to Speech & Sound Effect
+3. 文字转语音与音效
 =========================================
 
-In this example, we use PiCar-X's (to be precise, Robot HAT’s) sound effects. 
-It consists of three parts, namely Muisc, Sound, Text to Speech.
+在此示例中，我们将使用 PiCar-X（更准确地说是 Robot HAT）的音效功能。
+它包含三个部分：音乐、音效、文字转语音。
 
+**安装 i2samp**
 
-**Install i2samp**
+在使用文字转语音（TTS）和音效功能之前，请先激活扬声器以便使其启用并可以发声。
 
-Before using the Text-to-Speech (TTS) and Sound Effect functions, 
-first activate the speaker so that it will be enabled and can make sounds.
-
-Run ``i2samp.sh`` in the **picar-x** folder, 
-and this script will install everything needed to use i2s amplifier.
+运行 **picar-x** 文件夹中的 ``i2samp.sh`` 脚本，安装使用 i2s 放大器所需的一切。
 
 .. raw:: html
 
@@ -40,11 +37,11 @@ and this script will install everything needed to use i2s amplifier.
 
 .. image:: img/tt_bash.png
 
-There will be several prompts asking to confirm the request. Respond to all prompts with a **Y**. After the changes have been made to the Raspberry Pi system, the computer will need to reboot for these changes to take effect.
+执行过程中会有多个确认提示，请全部选择 **Y**。更改应用于 Raspberry Pi 系统后，需要重新启动计算机才能生效。
 
-After rebooting, run the ``i2samp.sh`` script again to test the amplifier. If a sound successfully plays from the speaker, the configuration is complete.
+重启后，再次运行 ``i2samp.sh`` 脚本测试放大器。如果扬声器成功播放声音，配置即完成。
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -55,16 +52,16 @@ After rebooting, run the ``i2samp.sh`` script again to test the amplifier. If a 
     cd ~/picar-x/example
     sudo python3 3.tts_example.py
     
-After the code runs, please operate according to the prompt that printed on the terminal.
+代码运行后，请根据终端打印的提示操作。
 
-Input key to call the function!
+按下键盘按键以调用功能：
 
-    * space: Play sound effect (Car horn)
-    * c: Play sound effect with threads
-    * t: Text to speak (Say Hello)
-    * q: Play/Stop Music
+    * 空格键: 播放音效（汽车喇叭）
+    * c: 使用线程播放音效
+    * t: 文本语音播报（说“Hello”）
+    * q: 播放/停止音乐
 
-**Code**
+**代码**
 
 .. code-block:: python
 
@@ -116,54 +113,53 @@ Input key to call the function!
     if __name__ == "__main__":
         main()
 
-**How it works?**
+**工作原理**
 
-Functions related to background music include these:
+与背景音乐相关的功能包括：
 
-* ``music = Music()`` : Declare the object.
-* ``music.music_set_volume(20)`` : Set the volume, the range is 0~100.
-* ``music.music_play('../musics/slow-trail-Ahjay_Stelino.mp3')`` : Play music files, here is the **slow-trail-Ahjay_Stelino.mp3** file under the ``../musics`` path.
-* ``music.music_stop()`` : Stop playing background music.
+* ``music = Music()``：声明对象。
+* ``music.music_set_volume(20)``：设置音量，范围为 0~100。
+* ``music.music_play('../musics/slow-trail-Ahjay_Stelino.mp3')``：播放音乐文件，此处为路径 ``../musics`` 下的 **slow-trail-Ahjay_Stelino.mp3** 文件。
+* ``music.music_stop()``：停止播放背景音乐。
 
 .. note::
 
-    You can add different sound effects or music to ``musics`` or ``sounds`` folder via :ref:`filezilla`.
+    您可以通过 :ref:`filezilla` 将不同的音效或音乐添加到 ``musics`` 或 ``sounds`` 文件夹中。
 
-Functions related to sound effects include these:
+与音效相关的功能包括：
 
 * ``music = Music()``
-* ``music.sound_play('../sounds/car-double-horn.wav')`` : Play the sound effect file.
-* ``muisc.sound_play_threading('../sounds/car-double-horn.wav')`` : Play the sound effect file in a new thread mode without suspending the main thread.
+* ``music.sound_play('../sounds/car-double-horn.wav')``：播放音效文件。
+* ``music.sound_play_threading('../sounds/car-double-horn.wav')``：以线程模式播放音效文件，不会阻塞主线程。
 
+文字转语音功能使用了 `eSpeak <http://espeak.sourceforge.net/>`_ 软件。
 
-The `eSpeak <http://espeak.sourceforge.net/>`_ software is used to implement the functions of TTS.
+在 robot_hat 中导入 TTS 模块，该模块封装了将文字转换为语音的功能。
 
-Import the TTS module in robot_hat, which encapsulates functions that convert text to speech.
-
-Functions related to Text to Speech include these:
+与文字转语音相关的功能包括：
 
 * ``tts = TTS()``
-* ``tts.say(words)`` : Text audio.
-* ``tts.lang("en-US")`` :  Set the language.
+* ``tts.say(words)``：语音播报文本。
+* ``tts.lang("en-US")``：设置语言。
 
 .. note:: 
 
-    Set the language by setting the parameters of ``lang("")`` with the following characters.
+    可以通过设置 ``lang("")`` 参数指定语言，支持以下字符：
 
 .. list-table:: Language
     :widths: 15 50
 
     *   - zh-CN 
-        - Mandarin (Chinese)
+        - 普通话（中文）
     *   - en-US 
-        - English-United States
+        - 美国英语
     *   - en-GB     
-        - English-United Kingdom
+        - 英国英语
     *   - de-DE     
-        - Germany-Deutsch
+        - 德语
     *   - es-ES     
-        - España-Español
+        - 西班牙语
     *   - fr-FR  
-        - France-Le français
+        - 法语
     *   - it-IT  
-        - Italia-lingua italiana
+        - 意大利语

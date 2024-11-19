@@ -1,35 +1,28 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
 Robot HAT
 ==================
 
-|link_robot_hat_v4| is a multifunctional expansion board that allows Raspberry Pi to be quickly turned into a robot. 
-An MCU is on board to extend the PWM output and ADC input for the Raspberry Pi, 
-as well as a motor driver chip, I2S audio module and mono speaker. 
-As well as the GPIOs that lead out of the Raspberry Pi itself.
+|link_robot_hat_v4| 是一款多功能扩展板，可以让 Raspberry Pi 快速变身为机器人。
+板载 MCU 用于扩展 Raspberry Pi 的 PWM 输出和 ADC 输入，配备电机驱动芯片、I2S 音频模块和单声道扬声器。
+此外，还引出了 Raspberry Pi 本身的 GPIO 接口。
 
-It also comes with a Speaker, 
-which can be used to play background music, sound effects and implement TTS functions to make your project more interesting.
+扩展板还配备了扬声器，
+可以用来播放背景音乐、音效，并实现 TTS（文字转语音）功能，让您的项目更加有趣。
 
-Accepts 7-12V power input with 2 battery indicators, 1 charge indicator and 1 power indicator. 
-The board also has a user available LED and a button for you to quickly test some effects.
+支持 7-12V 电源输入，带有 2 个电池指示灯、1 个充电指示灯和 1 个电源指示灯。
+此外，板上还提供了一个用户可用的 LED 和一个按键，便于您快速测试一些功能效果。
 
-For detailed instructions, please refer to: |link_robot_hat_v4|.
-
-
-
-
-
-
+有关详细说明，请参考：|link_robot_hat_v4|。

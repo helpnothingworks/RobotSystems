@@ -1,51 +1,51 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    你好，欢迎来到 SunFounder 树莓派、Arduino 和 ESP32 爱好者社区的 Facebook 页面！与其他爱好者一起深入探讨树莓派、Arduino 和 ESP32。
 
-    **Why Join?**
+    **为什么加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**: 通过我们的社区和团队的帮助解决售后问题和技术挑战。
+    - **学习与分享**: 交流技巧和教程，提升你的技能。
+    - **独家预览**: 提前了解新产品发布和预告。
+    - **特别折扣**: 尊享我们最新产品的专属折扣。
+    - **节日促销和赠品**: 参与赠品活动和节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 加入我们吧！
 
-Orienteering
+定向越野
 ==================
 
-This project uses the remote control function to guide the PiCar-X through a competitive scavenger hunt!
+本项目使用遥控功能引导帕克进行竞技寻宝游戏！
 
-First, set up either an obstacle course, or a maze, or even an empty room that the PiCar-X can drive through. Then, randomly place six markers along the route, and put a color-card at each of the six markers for the PiCar-X to find. 
+首先，设置障碍训练场、迷宫，甚至是帕克可以通过的空房间。 然后，沿路线随机放置六个标记，并在六个标记中的每个标记处放一张色卡，供帕克查找。
 
-The six color models for PiCar-X are: red, orange, yellow, green, blue and purple, and are ready to print from a colored printer from the PDF below. 
+帕克的六种颜色模型是：红色、橙色、黄色、绿色、蓝色和紫色，可以从下面的 PDF 中的彩色打印机进行打印。
 
-* :download:`[PDF]Color Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/color-cards.pdf>`
+* :download:`[PDF]颜色卡 <https://gitee.com/sunfounder/sf-pdf/raw/master/%E5%8D%A1%E7%89%87/%E7%9B%AE%E6%A0%87%E8%AF%86%E5%88%AB/%E9%A2%9C%E8%89%B2%E5%8D%A1.pdf>`
 
 .. image:: img/color_card.png
 
 .. note::
 
-    The printed colors may have a slightly different hue from the Ezblock color models due to printer toner differences, or the printed medium, such as a tan-colored paper. This can cause a less accurate color recognition.
+    由于打印机碳粉或打印介质（如棕褐色纸）的不同，打印的颜色可能与 Ezblock 颜色模型的色调略有不同。 这会导致不太准确的颜色识别。
 
-The PiCar-X will be programmed to find three of the six colors in a random order, and will be using the TTS function to announce which color to look for next.
+帕克将被编程为以随机顺序查找六种颜色中的三种，并将使用 TTS 功能宣布下一个要查找的颜色。
 
-The objective is to help the PiCar-X find each of the three colors in as short of a time as possible.
+目标是帮助帕克在尽可能短的时间内找到三种颜色中的每一种。
 
-Place PiCar-X in the middle of the field and click the Button on the Remote Control page to start the game. 
+将帕克放置在场地中间，点击遥控页面上的按钮开始游戏。
 
 
 .. image:: img/orienteering.png
 
-Take turns playing this game with friends to see who can help PiCar-X complete the objective the fastest!
+和朋友轮流玩这个游戏，看看谁能最快帮助帕克完成目标！
 
-**EXAMPLE**
+**示例**
 
 .. note::
 
-    * You can write the program according to the following picture, please refer to the tutorial: :ref:`ezblock:create_project_latest`.
-    * Or find the code with the same name on the **Examples** page of the EzBlock Studio and click **Run** or **Edit** directly.
+  你可以直接打开我们提供的示例或者是按照下图来编写程序，详细教程请参考 :ref:`open_create`.
+
 
 
 .. image:: img/sp210513_154117.png

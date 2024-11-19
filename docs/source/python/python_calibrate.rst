@@ -1,31 +1,31 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_calibrate:
 
-0. Calibrating the PiCar-X
+0. 校准 PiCar-X
 =================================
 
-Calibrate Motors & Servo
+校准电机和舵机
 ---------------------------
 
-Some servo angles may be slightly tilted due to possible deviations during PiCar-X 
-installation or limitations of the servos themselves, so you can calibrate them.
+由于 PiCar-X 安装过程中可能存在偏差，或者舵机本身存在局限性，某些舵机角度可能会稍有倾斜，
+因此可以对其进行校准。
 
-Of course, you can skip this chapter if you think the assembly is perfect and doesn't require calibration.
+当然，如果您认为安装非常完美且无需校准，可以跳过本章。
 
-#. Run the ``calibration.py``.
+#. 运行 ``calibration.py``。
 
     .. raw:: html
 
@@ -36,45 +36,43 @@ Of course, you can skip this chapter if you think the assembly is perfect and do
         cd ~/picar-x/example/calibration
         sudo python3 calibration.py
 
-#. After running the code, you will see the following interface displayed in the terminal.
+#. 运行代码后，终端会显示以下界面：
 
     .. image:: img/calibrate1.png
 
-#. The ``R`` key is used to test if the 3 servos are working properly. After selecting a servo with the ``1``, ``2`` or ``3`` keys, then press the ``R`` key to test that servo.
+#. 按 ``R`` 键测试 3 个舵机是否正常工作。使用 ``1``、 ``2`` 或 ``3`` 键选择舵机后，再按 ``R`` 键测试对应舵机。
 
-#. Press the number key ``1`` to select the front wheel servo, and then press the ``W/S`` key to let the front wheel looks as forward as possible without skewing left and right.
+#. 按数字键 ``1`` 选择前轮舵机，然后按 ``W/S`` 键调整前轮方向，使其尽量保持正前方且不偏左或偏右。
 
     .. image:: img/calibrate2.png
 
-#. Press the number key ``2`` to select the **Pan servo**, then press the ``W/S`` key to make the pan/tilt platform look straight ahead and not tilt left or right.
+#. 按数字键 ``2`` 选择 **水平舵机**，然后按 ``W/S`` 键调整云台水平，使其正对前方且不倾斜左右。
 
     .. image:: img/calibrate3.png
 
-#. Press the number key ``3`` to select the **tilt servo**, then press the ``W/S`` key to make the pan/tilt platform look straight ahead and not tilt up and down.
+#. 按数字键 ``3`` 选择 **俯仰舵机**，然后按 ``W/S`` 键调整云台俯仰角度，使其正对前方且不向上或向下倾斜。
 
     .. image:: img/calibrate4.png
 
-#. Since the wiring of the motors may be reversed during installation, you can press ``E`` to test whether the car can move forward normally. If not, use the number keys ``4`` and ``5`` to select the left and right motors, then press the ``Q`` key to calibrate the rotation direction.
+#. 如果在安装过程中电机接线发生了反转，您可以按 ``E`` 键测试小车是否可以正常向前移动。如果不能，使用数字键 ``4`` 和 ``5`` 选择左右电机，然后按 ``Q`` 键校准旋转方向。
 
     .. image:: img/calibrate6.png
 
-#. When the calibration is completed, press the ``Spacebar`` to save the calibration parameters. There will be a prompt to enter ``y`` to confirm, and then press ``Ctrl+C`` to exit the program to complete the calibration.
+#. 校准完成后，按 ``空格键`` 保存校准参数。根据提示输入 ``y`` 确认，最后按 ``Ctrl+C`` 退出程序完成校准。
 
     .. image:: img/calibrate5.png
 
 
-Calibrate Grayscale Module
+校准灰度模块
 ---------------------------
 
-Due to varying environmental conditions and lighting situations, 
-the preset parameters for the greyscale module might not be optimal. 
-You can fine-tune these settings through this program to achieve better results.
+由于环境条件和光线情况的不同，灰度模块的预设参数可能无法达到最佳效果。
+通过此程序，您可以对参数进行微调以获得更好的性能。
 
 
-#. Lay down a strip of black electrical tape, about 15cm long, on a light-colored floor. Center your PiCar-X so that it straddles the tape. In this setup, the middle sensor of the greyscale module should be directly above the tape, while the two flanking sensors should hover over the lighter surface.
+#. 在浅色地板上贴一条约 15 厘米长的黑色电工胶带。将 PiCar-X 放置在胶带上，使其跨越胶带。此时，灰度模块的中间传感器应正对胶带，而两侧传感器应悬空在浅色地面上。
 
-
-#. Run the ``grayscale_calibration.py``.
+#. 运行 ``grayscale_calibration.py``。
 
     .. raw:: html
 
@@ -85,19 +83,18 @@ You can fine-tune these settings through this program to achieve better results.
         cd ~/picar-x/example/calibration
         sudo python3 grayscale_calibration.py
 
-#. After running the code, you will see the following interface displayed in the terminal.
+#. 运行代码后，终端会显示以下界面：
 
     .. image:: img/calibrate_g1.png
 
-#. Press the "Q" key to initiate the greyscale calibration. You'll then observe the PiCar-X make minor movements to both the left and the right. During this process, each of the three sensors should sweep across the electrical tape at least once.
+#. 按 ``Q`` 键开始灰度校准。您会看到 PiCar-X 轻微向左和向右移动。在此过程中，三个传感器应至少一次扫过电工胶带。
 
-
-#. Additionally, you will notice three pairs of significantly different values appearing in the "threshold value" section, while the "line reference" will display two intermediate values, each representing the average of one of these pairs.
+#. 在 "threshold value" 区域，您将看到三组明显不同的数值，而 "line reference" 将显示两组中间值，分别表示每组数值的平均值。
 
     .. image:: img/calibrate_g2.png
 
-#. Next, suspend the PiCar-X in mid-air (or position it over a cliff edge) and press the "E" key. You'll observe that the "cliff reference" values are also updated accordingly.
+#. 接下来，将 PiCar-X 悬空（或放置在悬崖边缘）并按下 ``E`` 键，您会发现 "cliff reference" 的值也会相应更新。
 
     .. image:: img/calibrate_g3.png
 
-#. Once you've verified that all the values are accurate, press the "space" key to save the data. You can then exit the program by pressing Ctrl+C.
+#. 确认所有数值准确无误后，按 ``空格键`` 保存数据。然后按 ``Ctrl+C`` 退出程序。

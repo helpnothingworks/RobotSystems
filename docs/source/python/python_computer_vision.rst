@@ -1,25 +1,25 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
 
-    **Why Join?**
+    **为什么要加入？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
+    - **学习与分享**：交流技巧与教程，提升您的技能。
+    - **独家预览**：抢先了解新产品发布及独家内容。
+    - **专属折扣**：享受最新产品的独家优惠。
+    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
 
 .. _py_computer_vision:
 
-7. Computer Vision
+7. 计算机视觉
 =======================
 
-This project will officially enter the field of computer vision!
+通过本项目，我们将正式进入计算机视觉领域！
 
-**Run the Code**
+**运行代码**
 
 .. raw:: html
 
@@ -30,9 +30,9 @@ This project will officially enter the field of computer vision!
     cd ~/picar-x/example
     sudo python3 7.display.py
 
-**View the Image**
+**查看视频画面**
 
-After the code runs, the terminal will display the following prompt:
+代码运行后，终端将显示以下提示信息：
 
 .. code-block::
 
@@ -44,63 +44,59 @@ After the code runs, the terminal will display the following prompt:
     * Debug mode: off
     * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
 
-Then you can enter ``http://<your IP>:9000/mjpg`` in the browser to view the video screen. such as:  ``https://192.168.18.113:9000/mjpg``
+然后在浏览器中输入 ``http://<你的 IP>:9000/mjpg``，即可查看视频画面，例如： ``https://192.168.18.113:9000/mjpg``
 
 .. image:: img/display.png
 
+程序运行后，您将在终端看到以下提示：
 
-After the program runs, you will see the following information in the final:
+* 输入键以调用功能！
+* q: 拍照
+* 1: 检测颜色：红色
+* 2: 检测颜色：橙色
+* 3: 检测颜色：黄色
+* 4: 检测颜色：绿色
+* 5: 检测颜色：蓝色
+* 6: 检测颜色：紫色
+* 0: 关闭颜色检测
+* r: 扫描二维码
+* f: 开启/关闭人脸检测
+* s: 显示检测到的物体信息
 
+请根据提示激活对应功能：
 
-* Input key to call the function!
-* q: Take photo
-* 1: Color detect : red
-* 2: Color detect : orange
-* 3: Color detect : yellow
-* 4: Color detect : green
-* 5: Color detect : blue
-* 6: Color detect : purple
-* 0: Switch off Color detect
-* r: Scan the QR code
-* f: Switch ON/OFF face detect
-* s: Display detected object information
+    * **拍照**
 
-Please follow the prompts to activate the corresponding functions.
+        在终端输入 ``q`` 并按回车。当前摄像头拍摄的画面将被保存（如果颜色检测功能已开启，标记框也会显示在保存的图片中）。
+        您可以在 Raspberry Pi 的 ``/home/{username}/Pictures/`` 目录中查看这些照片。
+        使用工具（例如 :ref:`filezilla`）可以将照片传输到您的电脑。
 
-    *  **Take Photo**
+    * **颜色检测**
 
-        Type ``q`` in the terminal and press Enter. The picture currently seen by the camera will be saved (if the color detection function is turned on, the mark box will also appear in the saved picture). 
-        You can see these photos from the ``/home/{username}/Pictures/`` directory of the Raspberry Pi.
-        You can use tools such as :ref:`filezilla` to transfer photos to your PC.
-        
-
-    *  **Color Detect**
-
-        Entering a number between ``1~6`` will detect one of the colors in "red, orange, yellow, green, blue, purple". Enter ``0`` to turn off color detection.
+        输入数字 ``1~6`` 将检测红、橙、黄、绿、蓝、紫中的一种颜色。输入 ``0`` 可关闭颜色检测。
 
         .. image:: img/DTC2.png
 
-        .. note:: You can download and print the :download:`PDF Color Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/color-cards.pdf>` for color detection.
+        .. note:: 您可以下载并打印PDF 色卡 :download:`PDF Color Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/color-cards.pdf>` 用于颜色检测。
 
 
-    *  **Face Detect**
+    * **人脸检测**
 
-        Type ``f`` to turn on face detection.
+        输入 ``f`` 开启人脸检测。
 
         .. image:: img/DTC5.png
 
-    *  **QR Code Detect**
+    * **二维码检测**
 
-        Enter ``r`` to open the QR code recognition. No other operations can be performed before the QR code is recognized. The decoding information of the QR code will be printed in the terminal.
+        输入 ``r`` 启动二维码识别。在二维码被识别前无法执行其他操作。二维码的解码信息会显示在终端中。
 
         .. image:: img/DTC4.png
 
-    *  **Display Information**
+    * **显示检测信息**
 
-        Entering ``s`` will print the information of the face detection (and color detection) target in the terminal. Including the center coordinates (X, Y) and size (Weight, height) of the measured object.
+        输入 ``s`` 将在终端显示目标检测信息（包括颜色检测和人脸检测）。信息包括目标的中心坐标（X, Y）和大小（宽度、高度）。
 
-
-**Code** 
+**代码**
 
 .. code-block:: python
 
@@ -131,7 +127,7 @@ Please follow the prompts to activate the corresponding functions.
     '''
 
     color_list = ['close', 'red', 'orange', 'yellow',
-            'green', 'blue', 'purple',
+                  'green', 'blue', 'purple',
     ]
 
     def face_detect(flag):
@@ -239,56 +235,55 @@ Please follow the prompts to activate the corresponding functions.
     if __name__ == "__main__":
         main()
 
-**How it works?**
+**工作原理**
 
-The first thing you need to pay attention to here is the following function. These two functions allow you to start the camera.
+以下函数是摄像头启动和显示功能的关键部分：
 
 .. code-block:: python
 
     Vilib.camera_start()
     Vilib.display()
 
-Functions related to "object detection":
+与“目标检测”相关的功能如下：
 
-* ``Vilib.face_detect_switch(True)`` : Switch ON/OFF face detection
-* ``Vilib.color_detect(color)`` : For color detection, only one color detection can be performed at the same time. The parameters that can be input are: ``"red"``, ``"orange"``, ``"yellow"``, ``"green"``, ``"blue"``, ``"purple"``
-* ``Vilib.color_detect_switch(False)`` : Switch OFF color detection
-* ``Vilib.qrcode_detect_switch(False)`` : Switch ON/OFF QR code detection, Returns the decoded data of the QR code.
-* ``Vilib.gesture_detect_switch(False)`` : Switch ON/OFF gesture detection
-* ``Vilib.traffic_sign_detect_switch(False)`` : Switch ON/OFF traffic sign detection
+* ``Vilib.face_detect_switch(True)``：开启/关闭人脸检测。
+* ``Vilib.color_detect(color)``：颜色检测，每次仅支持一种颜色检测。可用参数为： ``"red"`` , ``"orange"`` , ``"yellow"`` , ``"green"`` , ``"blue"`` , ``"purple"`` 。
+* ``Vilib.color_detect_switch(False)``：关闭颜色检测。
+* ``Vilib.qrcode_detect_switch(False)``：开启/关闭二维码检测，返回二维码的解码数据。
+* ``Vilib.gesture_detect_switch(False)``：开启/关闭手势检测。
+* ``Vilib.traffic_sign_detect_switch(False)``：开启/关闭交通标志检测。
 
-The information detected by the target will be stored in the ``detect_obj_parameter = Manager().dict()`` dictionary.
-
-In the main program, you can use it like this:
+检测到的目标信息存储在字典 ``detect_obj_parameter = Manager().dict()`` 中，
+可在主程序中使用如下方式调用：
 
 .. code-block:: python
 
     Vilib.detect_obj_parameter['color_x']
 
-The keys of the dictionary and their uses are shown in the following list:
+以下是字典键及其用途：
 
-* ``color_x``: the x value of the center coordinate of the detected color block, the range is 0~320
-* ``color_y``: the y value of the center coordinate of the detected color block, the range is 0~240
-* ``color_w``: the width of the detected color block, the range is 0~320
-* ``color_h``: the height of the detected color block, the range is 0~240
-* ``color_n``: the number of detected color patches
-* ``human_x``: the x value of the center coordinate of the detected human face, the range is 0~320
-* ``human_y``: the y value of the center coordinate of the detected face, the range is 0~240
-* ``human_w``: the width of the detected human face, the range is 0~320
-* ``human_h``: the height of the detected face, the range is 0~240
-* ``human_n``: the number of detected faces
-* ``traffic_sign_x``: the center coordinate x value of the detected traffic sign, the range is 0~320
-* ``traffic_sign_y``: the center coordinate y value of the detected traffic sign, the range is 0~240
-* ``traffic_sign_w``: the width of the detected traffic sign, the range is 0~320
-* ``traffic_sign_h``: the height of the detected traffic sign, the range is 0~240
-* ``traffic_sign_t``: the content of the detected traffic sign, the value list is `['stop','right','left','forward']`
-* ``gesture_x``: The center coordinate x value of the detected gesture, the range is 0~320
-* ``gesture_y``: The center coordinate y value of the detected gesture, the range is 0~240
-* ``gesture_w``: The width of the detected gesture, the range is 0~320
-* ``gesture_h``: The height of the detected gesture, the range is 0~240
-* ``gesture_t``: The content of the detected gesture, the value list is `["paper","scissor","rock"]`
-* ``qr_date``: the content of the QR code being detected
-* ``qr_x``: the center coordinate x value of the QR code to be detected, the range is 0~320
-* ``qr_y``: the center coordinate y value of the QR code to be detected, the range is 0~240
-* ``qr_w``: the width of the QR code to be detected, the range is 0~320
-* ``qr_h``: the height of the QR code to be detected, the range is 0~320
+* ``color_x``：检测到的颜色块中心坐标 x 值，范围 0~320。
+* ``color_y``：检测到的颜色块中心坐标 y 值，范围 0~240。
+* ``color_w``：检测到的颜色块宽度，范围 0~320。
+* ``color_h``：检测到的颜色块高度，范围 0~240。
+* ``color_n``：检测到的颜色块数量。
+* ``human_x``：检测到的人脸中心坐标 x 值，范围 0~320。
+* ``human_y``：检测到的人脸中心坐标 y 值，范围 0~240。
+* ``human_w``：检测到的人脸宽度，范围 0~320。
+* ``human_h``：检测到的人脸高度，范围 0~240。
+* ``human_n``：检测到的人脸数量。
+* ``traffic_sign_x``：检测到的交通标志中心坐标 x 值，范围 0~320。
+* ``traffic_sign_y``：检测到的交通标志中心坐标 y 值，范围 0~240。
+* ``traffic_sign_w``：检测到的交通标志宽度，范围 0~320。
+* ``traffic_sign_h``：检测到的交通标志高度，范围 0~240。
+* ``traffic_sign_t``：检测到的交通标志内容，值为 `['stop','right','left','forward']`。
+* ``gesture_x``：检测到的手势中心坐标 x 值，范围 0~320。
+* ``gesture_y``：检测到的手势中心坐标 y 值，范围 0~240。
+* ``gesture_w``：检测到的手势宽度，范围 0~320。
+* ``gesture_h``：检测到的手势高度，范围 0~240。
+* ``gesture_t``：检测到的手势内容，值为 `["paper","scissor","rock"]`。
+* ``qr_data``：检测到的二维码内容。
+* ``qr_x``：检测到的二维码中心坐标 x 值，范围 0~320。
+* ``qr_y``：检测到的二维码中心坐标 y 值，范围 0~240。
+* ``qr_w``：检测到的二维码宽度，范围 0~320。
+* ``qr_h``：检测到的二维码高度，范围 0~240。

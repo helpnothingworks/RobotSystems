@@ -1,53 +1,52 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
-Calibrate the Car
+校准小车
 ============================
 
-After you connect the PiCar-X, there will be a calibration step. This is because of possible deviations in the installation process or limitations of the servos themselves, making some servo angles slightly tilted, so you can calibrate them in this step.
+连接 PiCar-X 后，需要进行校准步骤。这是因为在安装过程中可能存在偏差，或者伺服器本身的限制，导致一些伺服角度略有倾斜，因此您可以通过此步骤进行校准。
 
-But if you think the assembly is perfect and no calibration is needed, you can also skip this step.
-
+如果您认为组装非常完美且无需校准，也可以跳过此步骤。
 
 .. note::
-    If you want to recalibrate the robot during use, please follow the steps below.
+    如果您在使用过程中需要重新校准机器人，请按照以下步骤操作。
     
-    #. You can open the product detail page by clicking the connect icon in the upper left corner.
+    #. 点击左上角的连接图标打开产品详情页面。
 
         .. image:: img/calibrate0.png
 
-    #. Click the **Settings** button.
+    #. 点击 **设置** 按钮。
 
         .. image:: img/calibrate1.png
 
-    #. On this page, you can change the product name, product type, view the app version or calibrate the robot. Once you click on **Calibrate** you can go to the calibration page.
+    #. 在此页面，您可以更改产品名称、产品类型、查看应用版本或校准机器人。点击 **校准** 后即可进入校准页面。
 
         .. image:: img/calibrate2.png
 
-The calibration steps are as follows:
+校准步骤如下：
 
-#. Once you get to the calibration page, there will be two prompt points telling you where to calibrate.
+#. 进入校准页面后，会有两个提示点告诉您需要校准的位置。
 
     .. note::
-        Calibrating is a micro-adjustment process. It is recommended to take the part off and reassemble it if you click a button to the limit and the part is still off.
+        校准是一个微调过程。如果点击按钮到达极限时部件仍未对准，建议将该部分拆下并重新安装。
 
     .. image:: img/calibrate3.png
 
-#. Click on the left prompt point to calibrate the PiCar-X's Pan-Tilt(the camera part). By using the two sets of buttons on the right, you can slowly adjust the Pan-Tilt's orientation, as well as view their angles. When the adjustment is complete, click on **Confirm**.
+#. 点击左侧提示点校准 PiCar-X 的云台（摄像头部分）。使用右侧的两组按钮可以慢慢调整云台的方向，并查看其角度。调整完成后，点击 **确认**。
 
     .. image:: img/calibrate4.png
 
-#. To calibrate the front wheel orientation, click on the right prompt point. Use the two buttons on the right to get the front wheel facing straight ahead. When the adjustment is done, click on **Confirm**.
+#. 若需校准前轮方向，点击右侧提示点。使用右侧的两个按钮让前轮保持正前方。当调整完成后，点击 **确认**。
 
-    .. image:: img/calibrate5.png    
+    .. image:: img/calibrate5.png

@@ -1,46 +1,41 @@
-.. note::
+.. note:: 
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
 
-    **Why Join?**
+    **为什么加入我们？**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
+    - **学习与分享**：交流技巧和教程，提升您的技能水平。
+    - **独家预览**：抢先获得新产品公告和独家预览机会。
+    - **特别折扣**：享受我们最新产品的专属折扣优惠。
+    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
 
-3. Power Supply for Raspberry Pi (Important)
+3. 树莓派电源供应（重要）
 =====================================================
 
-Charge
+充电
 -------------------
 
-Insert the battery cable. Next, insert the USB-C cable to charge the battery.
-You will need to provide your own charger; we recommend a 5V 3A charger, or your commonly used smartphone charger will suffice.
+插入电池连接线，然后插入 USB-C 充电线为电池充电。您需要自备充电器，我们建议使用 5V 3A 的充电器，或者您常用的智能手机充电器也可以满足需求。
 
 .. image:: img/BTR_IMG_1096.png
 
 .. note::
-    Connect an external Type-C power source to the Type-C port on the robot hat; it will immediately start charging the battery, and a red indicator light will illuminate.\
-    When the battery is fully charged, the red light will automatically turn off.
+    连接外部 Type-C 电源到机器人扩展板的 Type-C 接口后，电池将自动开始充电，并点亮红色指示灯。\
+    当电池充满时，红色指示灯会自动熄灭。
 
 
-Power ON
+开机
 ----------------------
 
-Turn on the power switch. The Power indicator light and the battery level indicator light will illuminate.
+打开电源开关。电源指示灯和电池电量指示灯将亮起。
 
 .. image:: img/BTR_IMG_1097.png
 
-
-Wait for a few seconds, and you will hear a slight beep, indicating that the Raspberry Pi has successfully booted.
+等待几秒钟，您会听到轻微的蜂鸣声，表示树莓派已成功启动。
 
 .. note::
-    If both battery level indicator lights are off, please charge the battery.
-    When you need extended programming or debugging sessions, you can keep the Raspberry Pi operational by inserting the USB-C cable to charge the battery simultaneously.
-
-
-
+    如果电池电量指示灯都不亮，请为电池充电。
+    如果需要长时间编程或调试，您可以在为电池充电的同时插入 USB-C 充电线，保持树莓派正常运行。
