@@ -38,7 +38,7 @@
 
 #. 下载 EzBlock 镜像
  
-    * 天翼网盘：链接：https://cloud.189.cn/t/QNrEJnEjYNRz
+    * 天翼网盘：链接：https://cloud.189.cn/web/share?code=QRvYJzaeamM3，提取码：mvb5。
     * 百度网盘：链接：https://pan.baidu.com/s/1ku1VoukCebChq9-OzkHf_g?pwd=ezbl，提取码：ezbl。
     * 由于文件超过1G，需要在电脑上下载客户端之后才能下载文件。
 
