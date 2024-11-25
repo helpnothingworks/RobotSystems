@@ -168,6 +168,10 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/picar-x-v20/it/latest/" target="_blank">Tutorial online in italiano</a>
 
+.. |link_cn_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/picar-x-v20/cn/latest/" target="_blank">中文在线课程</a>
+
 .. |link_PiCar-X_kit| raw:: html
 
     <a href="https://www.sunfounder.com/products/picar-x?variant=44269165510891" target="_blank">Purchase Link for PiCar-X Kit</a>

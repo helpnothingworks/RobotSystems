@@ -27,6 +27,7 @@ SunFounder PiCar-Xをお選びいただき、ありがとうございます。
         * |link_fr_tutorials|
         * |link_es_tutorials|
         * |link_it_tutorials|
+        * |link_cn_tutorials|
 
     ご希望の言語でドキュメントにアクセスするために、それぞれのリンクをクリックしてください。
 
