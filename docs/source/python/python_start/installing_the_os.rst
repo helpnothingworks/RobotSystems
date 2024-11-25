@@ -1,17 +1,3 @@
-.. note:: 
-
-    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
-
-    **为什么加入我们？**
-
-    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
-    - **学习与分享**：交流技巧和教程，提升您的技能水平。
-    - **独家预览**：抢先获得新产品公告和独家预览机会。
-    - **特别折扣**：享受我们最新产品的专属折扣优惠。
-    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
-
-    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
-
 .. _install_os_sd:
 
 2. 安装操作系统
@@ -30,7 +16,7 @@
     .. image:: img/os_install_imager.png
         :align: center
 
-#. 安装过程中，可能会出现安全提示，这取决于您的操作系统。例如，在 Windows 上可能会显示警告消息，此时选择 **More info**，然后点击 **Run anyway**。按照屏幕提示完成 Raspberry Pi Imager 的安装。
+#. 安装过程中，可能会出现安全提示，这取决于您的操作系统。例如，在 Windows 上可能会显示警告消息，此时选择 **More info** ，然后点击 **Run anyway** 。按照屏幕提示完成 Raspberry Pi Imager 的安装。
 
     .. image:: img/os_info.png
         :align: center
@@ -45,17 +31,17 @@
 
 #. 使用读卡器将 SD 卡插入您的电脑或笔记本。
 
-#. 在 Imager 中点击 **Raspberry Pi Device**，从下拉列表中选择您的 Raspberry Pi 型号。
+#. 在 Imager 中点击 **Raspberry Pi Device** ，从下拉列表中选择您的 Raspberry Pi 型号。
 
-    .. image:: img/os_choose_device.png
+    .. image:: img/os_choose_device.jpg
         :align: center
 
-#. 选择 **Operating System**，并选择推荐的操作系统版本。
+#. 选择 **Operating System** ，并选择推荐的操作系统版本。
 
     .. image:: img/os_choose_os.png
         :align: center
 
-#. 点击 **Choose Storage**，选择用于安装的存储设备。
+#. 点击 **Choose Storage** ，选择用于安装的存储设备。
 
     .. note::
 
@@ -64,7 +50,7 @@
     .. image:: img/os_choose_sd.png
         :align: center
 
-#. 点击 **NEXT**，然后点击 **EDIT SETTINGS** 以自定义操作系统设置。
+#. 点击 **NEXT** ，然后点击 **EDIT SETTINGS** 以自定义操作系统设置。
 
     .. note::
 
@@ -73,7 +59,7 @@
     .. image:: img/os_enter_setting.png
         :align: center
 
-#. 设置 Raspberry Pi 的 **主机名**。
+#. 设置 Raspberry Pi 的 **主机名** 。
 
     .. note::
 
@@ -82,7 +68,7 @@
     .. image:: img/os_set_hostname.png
         :align: center
 
-#. 为 Raspberry Pi 的管理员账户创建 **用户名** 和 **密码**。
+#. 为 Raspberry Pi 的管理员账户创建 **用户名** 和 **密码** 。
 
     .. note::
 
@@ -91,7 +77,7 @@
     .. image:: img/os_set_username.png
         :align: center
 
-#. 配置无线局域网（Wi-Fi），输入您的网络 **SSID** 和 **密码**。
+#. 配置无线局域网（Wi-Fi），输入您的网络 **SSID** 和 **密码** 。
 
     .. note::
 
@@ -113,12 +99,12 @@
     .. image:: img/os_options.png
         :align: center
 
-#. 输入完操作系统自定义设置后，点击 **Save** 保存您的设置。然后点击 **Yes** 以在写入镜像时应用这些设置。
+#. 输入完操作系统自定义设置后，点击 **保存** 保存您的设置。然后点击 **是** 以在写入镜像时应用这些设置。
 
     .. image:: img/os_click_yes.png
         :align: center
 
-#. 如果 SD 卡中有现存数据，请确保备份以防数据丢失。如果无需备份，请点击 **Yes** 继续。
+#. 如果 SD 卡中有现存数据，请确保备份以防数据丢失。如果无需备份，请点击 **是** 继续。
 
     .. image:: img/os_continue.png
         :align: center

@@ -1,17 +1,3 @@
-.. note::
-
-    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区（Facebook）！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的奥秘。
-
-    **为什么要加入？**
-
-    - **专业支持**：在社区和团队的帮助下，快速解决售后问题和技术难题。
-    - **学习与分享**：交流技巧与教程，提升您的技能。
-    - **独家预览**：抢先了解新产品发布及独家内容。
-    - **专属折扣**：享受最新产品的独家优惠。
-    - **节日促销与赠品活动**：参与抽奖活动及节日促销。
-
-    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
-
 .. _control_by_app:
 
 13. 通过 APP 控制
@@ -62,7 +48,7 @@ SunFounder Controller 可用于控制基于 Raspberry Pi/Pico 的机器人。
 
     在 SunFounder Controller APP 中点击 “+” 图标创建一个新的控制器。
 
-    .. image:: img/app1.PNG
+    .. image:: img/app1.jpg
 
     在预设区域中，有一些产品的预设控制器可供选择，您可以根据需要使用。在这里，我们选择 **PiCar-X**。
 
@@ -72,11 +58,11 @@ SunFounder Controller 可用于控制基于 Raspberry Pi/Pico 的机器人。
 
     点击 **Connect** 按钮后，APP 会自动搜索附近的机器人。其名称在 ``picarx_control.py`` 文件中定义，并且必须始终处于运行状态。
 
-    .. image:: img/app9.PNG
+    .. image:: img/app9.jpg
     
-    点击产品名称后，会出现 “Connected Successfully” 的提示信息，产品名称将显示在右上角。
+    点击产品名称后，会出现 “连接成功” 的提示信息，产品名称将显示在右上角。
 
-    .. image:: img/app10.PNG
+    .. image:: img/app10.jpg
 
     .. note::
 
@@ -89,14 +75,14 @@ SunFounder Controller 可用于控制基于 Raspberry Pi/Pico 的机器人。
 
     点击 **Run** 按钮启动控制器，您将看到车辆拍摄的画面，现在您可以使用这些控件来操作您的 PiCar-X。
 
-    .. image:: img/app12.PNG
+    .. image:: img/app12.png
     
     以下是控件的功能说明：
 
     * **A**：显示车辆当前速度。
     * **E**：启动避障功能。
     * **I**：启动循迹功能。
-    * **J**：语音识别，按住此控件开始讲话，松开后显示识别的语音。代码中设置了 ``forward``、``backward``、``left`` 和 ``right`` 四个命令来控制车辆。
+    * **J**：语音识别，按住此控件开始讲话，松开后显示识别的语音。代码中设置了 ``forward``、 ``backward`` 、 ``left`` 和 ``right`` 四个命令来控制车辆。
     * **K**：控制车辆前进、后退、左转和右转。
     * **Q**：控制摄像头（头部）上下左右移动。
     * **N**：启动颜色识别功能。

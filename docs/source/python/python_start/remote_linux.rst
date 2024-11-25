@@ -1,17 +1,3 @@
-.. note::
-
-    欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者 Facebook 社区！与全球的爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的无限可能。
-
-    **加入我们的理由？**
-
-    - **专业支持**：在社区和团队的帮助下解决售后问题及技术难题。
-    - **学习与分享**：交换技能提升技巧的秘籍和教程。
-    - **新品预览**：抢先获取新产品发布和独家预览。
-    - **专属折扣**：享受我们最新产品的独家优惠。
-    - **节日促销与赠品活动**：参与赠品抽奖及节日促销活动。
-
-    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 马上加入！
-
 Linux/Unix 用户指南
 ==========================
 
@@ -28,7 +14,7 @@ Linux/Unix 用户指南
     * 如果终端显示类似 ``Ping request could not find host pi.local. Please check the name and try again.`` 的消息，请仔细检查输入的主机名。
     * 如果仍无法获取 IP 地址，请检查 Raspberry Pi 的网络或 WiFi 设置。
 
-#. 使用以下命令启动 SSH 连接：``ssh <username>@<hostname>.local`` 或 ``ssh <username>@<IP address>``。例如：
+#. 使用以下命令启动 SSH 连接： ``ssh <username>@<hostname>.local`` 或 ``ssh <username>@<IP address>``。例如：
 
     .. code-block::
 

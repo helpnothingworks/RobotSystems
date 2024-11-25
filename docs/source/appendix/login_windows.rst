@@ -1,17 +1,3 @@
-.. note:: 
-
-    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
-
-    **为什么加入我们？**
-
-    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
-    - **学习与分享**：交流技巧和教程，提升您的技能水平。
-    - **独家预览**：抢先获得新产品公告和独家预览机会。
-    - **特别折扣**：享受我们最新产品的专属折扣优惠。
-    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
-
-    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
-
 .. _login_windows:
 
 PuTTY
@@ -25,7 +11,7 @@ PuTTY
 
 **步骤 2**
 
-打开 PuTTY，点击左侧树状结构中的 **Session**。在 **Host Name (or IP address)** 下的文本框中输入树莓派的 IP 地址，在 **Port** 中输入 **22**（默认端口为 22）。
+打开 PuTTY，点击左侧树状结构中的 **Session** 。在 **Host Name (or IP address)** 下的文本框中输入树莓派的 IP 地址，在 **Port** 中输入 **22** （默认端口为 22）。
 
 .. image:: img/image25.png
     :align: center

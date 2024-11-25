@@ -1,17 +1,3 @@
-.. note:: 
-
-    您好，欢迎加入 SunFounder Raspberry Pi & Arduino & ESP32 爱好者社区！与其他爱好者一起深入探索 Raspberry Pi、Arduino 和 ESP32 的世界。
-
-    **为什么加入我们？**
-
-    - **专家支持**：通过我们的社区和团队帮助，解决售后问题和技术挑战。
-    - **学习与分享**：交流技巧和教程，提升您的技能水平。
-    - **独家预览**：抢先获得新产品公告和独家预览机会。
-    - **特别折扣**：享受我们最新产品的专属折扣优惠。
-    - **节日促销和赠品**：参与节日抽奖和特别促销活动。
-
-    👉 准备好与我们一起探索和创造了吗？点击 [|link_sf_facebook|] 立即加入吧！
-
 校准小车
 ============================
 
@@ -28,11 +14,11 @@
 
     #. 点击 **设置** 按钮。
 
-        .. image:: img/calibrate1.png
+        .. image:: img/calibrate01.png
 
     #. 在此页面，您可以更改产品名称、产品类型、查看应用版本或校准机器人。点击 **校准** 后即可进入校准页面。
 
-        .. image:: img/calibrate2.png
+        .. image:: img/calibrate02.png
 
 校准步骤如下：
 
@@ -41,12 +27,12 @@
     .. note::
         校准是一个微调过程。如果点击按钮到达极限时部件仍未对准，建议将该部分拆下并重新安装。
 
-    .. image:: img/calibrate3.png
+    .. image:: img/calibrate03.png
 
 #. 点击左侧提示点校准 PiCar-X 的云台（摄像头部分）。使用右侧的两组按钮可以慢慢调整云台的方向，并查看其角度。调整完成后，点击 **确认**。
 
-    .. image:: img/calibrate4.png
+    .. image:: img/imgIMG_04031.png
 
 #. 若需校准前轮方向，点击右侧提示点。使用右侧的两个按钮让前轮保持正前方。当调整完成后，点击 **确认**。
 
-    .. image:: img/calibrate5.png
+    .. image:: img/calibrate05.png
