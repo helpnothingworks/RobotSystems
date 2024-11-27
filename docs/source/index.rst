@@ -27,7 +27,8 @@ Merci d'avoir choisi notre |link_PiCar_kit|.
         * |link_en_tutorials|
         * |link_fr_tutorials|
         * |link_es_tutorials|
-        * |link_it_tutorials|     
+        * |link_it_tutorials|
+        * |link_cn_tutorials|
 
     Cliquez sur les liens respectifs pour accéder au document dans la langue de votre choix.
 
