@@ -170,7 +170,7 @@ rst_epilog = """
 
 .. |link_cn_tutorials| raw:: html
 
-    <a href="https://docs.sunfounder.com/projects/picar-x-v20/cn/latest/" target="_blank">中文在线课程</a>
+    <a href="https://docs.sunfounder.com/projects/picar-x-v20/zh-cn/latest/" target="_blank">中文在线课程</a>
 
 .. |link_PiCar-X_kit| raw:: html
 
