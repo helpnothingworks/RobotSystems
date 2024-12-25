@@ -122,7 +122,7 @@ rst_epilog = """
 
 .. |link_voice_options| raw:: html
 
-    <a href="https://platform.openai.com/docs/guides/text-to-speech/voice-options" target="_blank">Voice options</a>
+    <a href="https://platform.openai.com/docs/guides/text-to-speech/voice-options" target="_blank">Sprachoptionen</a>
 
 .. |link_iso_language_code| raw:: html
 
@@ -130,15 +130,15 @@ rst_epilog = """
 
 .. |link_openai_platform| raw:: html
 
-    <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a>
+    <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Plattform</a>
 
 .. |link_microphone| raw:: html
 
-    <a href="https://www.sunfounder.com/products/mini-usb-microphone?_pos=2&_sid=d05c80026&_ss=r" target="_blank">Microphone link</a>
+    <a href="https://www.sunfounder.com/products/mini-usb-microphone?_pos=2&_sid=d05c80026&_ss=r" target="_blank">Mikrofonlink</a>
 
 .. |link_sf_facebook| raw:: html
 
-    <a href="https://bit.ly/raphaelkit " target="_blank">here</a>
+    <a href="https://bit.ly/raphaelkit " target="_blank">hier</a>
 
 .. |link_robot_hat| raw:: html
 
