@@ -23,6 +23,12 @@ project = 'SunFounder PiCar-X Kit'
 copyright = f'{time.localtime().tm_year}, SunFounder'
 author = 'www.sunfounder.com'
 
+# -- sphinx_rtd_theme Theme options -----------------------------------------------------
+html_theme_options = {
+    'flyout_display': 'attached',
+    'version_selector': False,
+    'language_selector': False,
+}
 
 # -- General configuration ---------------------------------------------------
 
@@ -32,9 +38,9 @@ author = 'www.sunfounder.com'
 extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx_copybutton',
-    'sphinx_rtd_theme',
-    "sphinx.ext.intersphinx",
+    'sphinx_rtd_theme'
 ]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -42,11 +48,6 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
-
-# -- sphinx_rtd_theme Theme options -----------------------------------------------------
-html_theme_options = {
-    'flyout_display': 'attached'
-}
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -57,11 +58,6 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Link to other projects’ documentation with intersphinx. Use the intersphinx_mapping configuration to indicate the name and link of the projects you want to use
-
-extensions = [
-    'sphinx.ext.intersphinx',
-]
-
 
 intersphinx_mapping = {
     'ezblock': ('https://docs.sunfounder.com/projects/ezblock3/en/latest/', None),
