@@ -5,6 +5,7 @@ let supportLangs = {
     'fr': ['Cette documentation est également disponible en', 'français', 'Ne plus afficher'],
     'es': ['Esta documentación también está disponible en', 'español', 'No mostrar más'],
     'it': ['Questa documentazione è disponibile anche in', 'Italiano', 'Non mostrare più'],
+    'zh': ['此文档也提供以下语言版本', '中文', '不再显示']
 };
 
 // Get the URL of the current page

@@ -63,6 +63,8 @@ intersphinx_mapping = {
     'ezblock': ('https://docs.sunfounder.com/projects/ezblock3/en/latest/', None),
 }
 
+intersphinx_disabled_reftypes = ["*"]
+
 html_static_path = ['_static']
 
 
@@ -102,7 +104,7 @@ html_css_files = [
 
 # Multi-language
 
-language = 'en' # Before running make html, set the language.
+language = 'fr' # Before running make html, set the language.
 locale_dirs = ['locale/'] # .po files for other languages are placed in the locale/ folder.
 
 gettext_compact = False # Support for generating the contents of the folders inside source/ into other languages.
@@ -117,7 +119,7 @@ rst_epilog = """
 
 .. |link_voice_options| raw:: html
 
-    <a href="https://platform.openai.com/docs/guides/text-to-speech/voice-options" target="_blank">Voice options</a>
+    <a href="https://platform.openai.com/docs/guides/text-to-speech/voice-options" target="_blank">Options de voix</a>
 
 .. |link_iso_language_code| raw:: html
 
@@ -125,15 +127,15 @@ rst_epilog = """
 
 .. |link_openai_platform| raw:: html
 
-    <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a>
+    <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Plateforme</a>
 
 .. |link_microphone| raw:: html
 
-    <a href="https://www.sunfounder.com/products/mini-usb-microphone?_pos=2&_sid=d05c80026&_ss=r" target="_blank">Microphone link</a>
+    <a href="https://www.sunfounder.com/products/mini-usb-microphone?_pos=2&_sid=d05c80026&_ss=r" target="_blank">Lien du microphone</a>
 
 .. |link_sf_facebook| raw:: html
 
-    <a href="https://bit.ly/raphaelkit " target="_blank">here</a>
+    <a href="https://bit.ly/raphaelkit " target="_blank">ici</a>
 
 .. |link_robot_hat| raw:: html
 
@@ -163,9 +165,13 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/picar-x-v20/it/latest/" target="_blank">Tutorial online in italiano</a>
 
+.. |link_cn_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/picar-x-v20/zh-cn/latest/" target="_blank">中文在线课程</a>
+
 .. |link_PiCar-X_kit| raw:: html
 
-    <a href="https://www.sunfounder.com/products/picar-x?variant=44269165510891" target="_blank">Purchase Link for PiCar-X Kit</a>
+    <a href="https://www.sunfounder.com/products/picar-x?variant=44269165510891" target="_blank">Lien d'achat pour PiCar-X Kit</a>
 
 .. |link_PiCar_kit| raw:: html
 
