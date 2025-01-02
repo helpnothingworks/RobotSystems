@@ -252,7 +252,7 @@
 「オブジェクト検出」に関連する機能：
 
 * ``Vilib.face_detect_switch(True)`` : 顔検出のオン/オフ切替
-* ``Vilib.color_detect(color)`` : 色検出について、一度に1色の検出のみ実行できます。入力できるパラメータは： ``"red"``, ``"orange"``, ``"yellow"``, ``"green"``, ``"blue"``, ``"purple"``
+* ``Vilib.color_detect(color)`` : 色検出について、一度に1色の検出のみ実行できます。入力できるパラメータは： ``"red"`` , ``"orange"`` , ``"yellow"`` , ``"green"`` , ``"blue"`` , ``"purple"``
 * ``Vilib.color_detect_switch(False)`` : 色検出のオフ切替
 * ``Vilib.qrcode_detect_switch(False)`` : QRコード検出のオン/オフ切替、QRコードのデコードデータを返します。
 * ``Vilib.gesture_detect_switch(False)`` : ジェスチャー検出のオン/オフ切替

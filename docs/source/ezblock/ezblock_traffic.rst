@@ -18,7 +18,7 @@
 このプロジェクトは、画像検出機能を使用して交通標識を探し、PiCar-X を標識の指示に従従わせるものです。 
 **traffic sign detection [on]** ブロックは、以下の印刷可能なPDFに含まれている 4つの異なる交通標識を認識します。
 PiCar-X が **STOP** 標識を検出すると停止します。
-**FORWARD** 標識は前進し、**LEFT** または **RIGHT** 矢印はその方向に曲がります。
+**FORWARD** 標識は前進し、 **LEFT** または **RIGHT** 矢印はその方向に曲がります。
 
 * :download:`[PDF]Traffic Sign Cards <https://github.com/sunfounder/sf-pdf/raw/master/prop_card/object_detection/traffic-sign-cards.pdf>`
 

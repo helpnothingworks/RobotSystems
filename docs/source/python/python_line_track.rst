@@ -135,7 +135,7 @@ PiCar-Xが脱線した場合は、いくつかの実験が必要になるかも�
 
 * 設定とグローバル変数：
 
-    ``current_state``、 ``px_power``、 ``offset``、 ``last_state`` は、車の動きを追跡および制御するために使用されるグローバル変数です。 ``px_power`` はモーターのパワーを設定し、 ``offset`` はステアリング角度を調整するために使用されます。
+    ``current_state`` 、 ``px_power`` 、 ``offset`` 、 ``last_state`` は、車の動きを追跡および制御するために使用されるグローバル変数です。 ``px_power`` はモーターのパワーを設定し、 ``offset`` はステアリング角度を調整するために使用されます。
 
     .. code-block:: python
 
