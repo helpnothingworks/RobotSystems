@@ -77,13 +77,13 @@ AIとのインタラクション：GPT-4Oの活用
 
 **アシスタントIDの取得**
 
-#. 次に、**Assistants** をクリックし、**Create** をクリックします。**Dashboard** ページ上にいることを確認してください。
+#. 次に、 **Assistants** をクリックし、 **Create** をクリックします。 **Dashboard** ページ上にいることを確認してください。
 
    .. image:: img/apt_create_assistant.png
       :width: 700
       :align: center
 
-#. カーソルをここに移動して、**assistant ID** をコピーし、テキストボックスまたは他の場所に貼り付けます。これは、このアシスタントのユニークな識別子です。
+#. カーソルをここに移動して、 **assistant ID** をコピーし、テキストボックスまたは他の場所に貼り付けます。これは、このアシスタントのユニークな識別子です。
 
    .. image:: img/apt_create_assistant_id.png
       :width: 700
@@ -119,7 +119,7 @@ AIとのインタラクション：GPT-4Oの活用
       :width: 700
       :align: center
 
-#. 次に、**Playground** をクリックして、アカウントが正常に機能しているか確認します。
+#. 次に、 **Playground** をクリックして、アカウントが正常に機能しているか確認します。
 
    .. image:: img/apt_playground.png
 
@@ -151,7 +151,7 @@ AIとのインタラクション：GPT-4Oの活用
       OPENAI_API_KEY = "sk-proj-vEBo7Ahxxxx-xxxxx-xxxx"
       OPENAI_ASSISTANT_ID = "asst_ulxxxxxxxxx"
 
-#. ``Ctrl + X``, ``Y``, ``Enter`` を押して、ファイルを保存して終了します。
+#. ``Ctrl + X``, ``Y`` , ``Enter`` を押して、ファイルを保存して終了します。
 
 4. 実行例
 ----------------------------------
@@ -183,7 +183,7 @@ PiCar-Xにマイクがない場合は、キーボード入力を使用してPiCa
 
       input:
 
-#. PiCar-Xのカメラフィードをウェブブラウザで見るためのリンクも表示されます： ``http://rpi_ip:9000/mjpg``。
+#. PiCar-Xのカメラフィードをウェブブラウザで見るためのリンクも表示されます： ``http://rpi_ip:9000/mjpg`` 。
 
    .. image:: img/apt_ip_camera.png
       :width: 700
@@ -256,7 +256,7 @@ PiCar-Xにマイクが搭載されている場合、または|link_microphone|�
 
       listening ...
 
-#. PiCar-Xのカメラフィードをウェブブラウザで見るためのリンクも表示されます： ``http://rpi_ip:9000/mjpg``。
+#. PiCar-Xのカメラフィードをウェブブラウザで見るためのリンクも表示されます： ``http://rpi_ip:9000/mjpg`` 。
 
    .. image:: img/apt_ip_camera.png
       :width: 700
