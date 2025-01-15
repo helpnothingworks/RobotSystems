@@ -17,7 +17,7 @@
 PuTTY
 =========================
 
-Windowsユーザーの場合、SSHアプリケーションをいくつか使用することができます。ここでは、`PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ を推奨します。
+Windowsユーザーの場合、SSHアプリケーションをいくつか使用することができます。ここでは、 `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ を推奨します。
 
 **ステップ1**
 
