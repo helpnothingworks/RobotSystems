@@ -28,7 +28,7 @@ AIとのインタラクション：GPT-4Oの活用
 
       python -m venv --system-site-packages my_venv
 
-#. ``my_venv`` ディレクトリに移動し、``source bin/activate`` コマンドを使って仮想環境をアクティブ化します。コマンドプロンプトが変わり、仮想環境がアクティブであることを示します。
+#. ``my_venv`` ディレクトリに移動し、 ``source bin/activate`` コマンドを使って仮想環境をアクティブ化します。コマンドプロンプトが変わり、仮想環境がアクティブであることを示します。
 
    .. code-block:: shell
 
