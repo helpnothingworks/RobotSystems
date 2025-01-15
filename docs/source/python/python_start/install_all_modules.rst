@@ -75,7 +75,7 @@
 .. code-block::
 
     cd ~/
-    git clone -b v2.0 https://github.com/sunfounder/picar-x.git
+    git clone -b v2.0 https://github.com/sunfounder/picar-x.git --depth 1
     cd picar-x
     sudo python3 setup.py install
 
