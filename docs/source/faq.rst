@@ -42,3 +42,30 @@ Q4: About the Robot HAT Detailed Tutorial?
 You can find a comprehensive tutorial about the Robot HAT here, including information on its hardware and API.
 
 * |link_robot_hat|
+
+Q5: About the Battery Charger?
+-----------------------------------------------------
+
+You can use a 5V/2A charger to charge the battery.
+
+Q6: Camera Not Working?
+-----------------------------------------------------
+
+If the camera is not displaying or displaying incorrectly, follow these troubleshooting steps:
+
+#. Ensure the FPC cable of the camera is securely connected. It is recommended to reconnect the camera and then power on the device.
+
+.. raw:: html
+
+       <div style="text-align: center;">
+           <video center loop autoplay muted style="max-width:90%">
+               <source src="_static/video/rpi_connect1.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+           </video>
+       </div>
+
+2. Use the following command to check if the camera is recognized.
+
+.. code-block::
+
+    libcamera-hello

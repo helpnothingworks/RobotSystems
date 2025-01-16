@@ -40,7 +40,7 @@ Raspberry Pi.
 
     .. note::
 
-        If you use a Raspberry Pi 4, you need to connect the screen to the HDMI0 (nearest the power in port).
+        If you use a Raspberry Pi 4/5, you need to connect the screen to the HDMI0 (nearest the power in port).
 
 #. Use the power adapter to power the Raspberry Pi.
 

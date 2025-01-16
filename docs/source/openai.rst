@@ -113,7 +113,7 @@ In this section, we will create and activate a virtual environment, installing t
          ["honking", "start engine"]
 
 
-#. PiCar-X is equipped with a camera module that you can enable to capture images of what it sees and upload them to GPT using our example code. Therefore, we recommend choosing GPT-4O, which has image analysis capabilities. Of course, you can also choose gpt-3.5-turbo or other models.
+#. PiCar-X is equipped with a camera module that you can enable to capture images of what it sees and upload them to GPT using our example code. Therefore, we recommend choosing GPT-4O-mini, which has image analysis capabilities. Of course, you can also choose gpt-3.5-turbo or other models.
 
    .. image:: img/apt_create_assistant_model.png
       :width: 700

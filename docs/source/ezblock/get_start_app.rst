@@ -20,6 +20,15 @@ Install and Configure EzBlock Studio
 As soon as the robot is assembled, you will need to carry out some basic operations.
 
 * :ref:`ezblock:install_ezblock_app_latest`: Download and install EzBlock Studio on your device or use the web-based version.
+
+.. note::
+    
+    If you are using the Raspberry Pi 5, please download the Beat version. 
+    Have any questions or issues during using? please don't hesitate to contact us.
+
+    .. image:: img/ezblock_beta_version.png
+       :width: 800
+
 * :ref:`ezblock:connect_product_ezblock_latest`: Configure Wi-Fi, Bluetooth and calibrate before use.
 * :ref:`ezblock:open_run_latest`: View or run the related example directly.
 

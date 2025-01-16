@@ -46,7 +46,7 @@ If your mainboard is a Raspberry Pi Zero W, here are the steps to install it on 
 Afterward, you can continue following the instructions in the video below from **1:45** onwards to assemble it.
 
 
-**Assembly Tutorial Video(Raspberry Pi 4/3/1 Model)**
+**Assembly Tutorial Video(Raspberry Pi 5/4/3/1 Model)**
 
 This video will walk you through the process of assembling your robot from scratch.
 
