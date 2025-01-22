@@ -46,7 +46,15 @@ You can find a comprehensive tutorial about the Robot HAT here, including inform
 Q5: About the Battery Charger?
 -----------------------------------------------------
 
-You can use a 5V/2A charger to charge the battery.
+To charge the battery, simply connect a 5V/2A Type-C power supply to the Robot Hat's power port. There's no need to turn on the Robot Hat's power switch during charging.
+You can also use the device while charging the battery. 
+
+.. image:: img/robot_hat_pic.png
+    :align: center
+    :width: 500
+
+During charging, the input power is boosted by the charging chip to charge the battery and simultaneously supply the DC-DC converter for external use, with a charging power of approximately 10W. 
+If external power consumption remains high for an extended period, the battery may supplement the power supply, similar to using a phone while charging. However, be mindful of the battery's capacity to avoid completely depleting it during simultaneous charging and usage.
 
 Q6: Camera Not Working?
 -----------------------------------------------------
