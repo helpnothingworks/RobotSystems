@@ -42,3 +42,38 @@ Q4: Wo finde ich ein detailliertes Tutorial zum Robot HAT?
 Hier finden Sie ein umfassendes Tutorial zum Robot HAT, einschließlich Informationen zu seiner Hardware und API.
 
 * |link_robot_hat|
+
+Q5: Über das Batterieladegerät
+-------------------------------------------------------------------
+
+Um die Batterie aufzuladen, schließen Sie einfach ein 5V/2A Type-C-Netzteil an den Stromanschluss des Robot Hat an. Es ist nicht erforderlich, den Netzschalter des Robot Hat während des Ladevorgangs einzuschalten.
+Das Gerät kann auch während des Ladevorgangs verwendet werden.
+
+.. image:: img/robot_hat_pic.png
+    :align: center
+    :width: 500
+
+Während des Ladevorgangs wird die Eingangsleistung durch den Ladechip verstärkt, um die Batterie zu laden und gleichzeitig den DC-DC-Wandler für die externe Nutzung zu versorgen. Die Ladeleistung beträgt dabei ungefähr 10W.
+Wenn der externe Stromverbrauch über einen längeren Zeitraum hoch bleibt, kann die Batterie die Stromversorgung ergänzen, ähnlich wie bei der Nutzung eines Telefons während des Ladevorgangs. Beachten Sie jedoch die Kapazität der Batterie, um ein vollständiges Entladen während gleichzeitiger Nutzung und Aufladung zu vermeiden.
+
+Q6: Kamera funktioniert nicht? 
+-----------------------------------------------------
+
+Falls die Kamera kein Bild anzeigt oder das Bild fehlerhaft ist, folgen Sie diesen Schritten zur Fehlerbehebung:
+
+#. Stellen Sie sicher, dass das FPC-Kabel der Kamera fest angeschlossen ist. Es wird empfohlen, die Kamera erneut anzuschließen und dann das Gerät einzuschalten.
+
+.. raw:: html
+
+       <div style="text-align: center;">
+           <video center loop autoplay muted style="max-width:90%">
+               <source src="_static/video/rpi_connect1.mp4" type="video/mp4">
+               Ihr Browser unterstützt das Video-Tag nicht.
+           </video>
+       </div>
+
+2. Verwenden Sie den folgenden Befehl, um zu überprüfen, ob die Kamera erkannt wird.
+
+.. code-block::
+
+    libcamera-hello
