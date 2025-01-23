@@ -42,3 +42,39 @@ Q4: Dove posso trovare un tutorial dettagliato sul Robot HAT?
 Puoi trovare un tutorial completo sul Robot HAT qui, inclusi dettagli sull'hardware e sull'API.
 
 * |link_robot_hat|
+
+Q5: Informazioni sul caricabatterie
+-------------------------------------------------------------------
+
+Per caricare la batteria, collega semplicemente un alimentatore Type-C da 5V/2A alla porta di alimentazione del Robot Hat. Non è necessario accendere l'interruttore di alimentazione del Robot Hat durante la ricarica.
+Puoi anche utilizzare il dispositivo mentre la batteria è in carica.
+
+.. image:: img/robot_hat_pic.png
+    :align: center
+    :width: 500
+
+Durante la ricarica, l'energia in ingresso viene amplificata dal chip di ricarica per caricare la batteria e contemporaneamente alimentare il convertitore DC-DC per uso esterno, con una potenza di ricarica di circa 10W.
+Se il consumo di energia esterna rimane elevato per un periodo prolungato, la batteria potrebbe integrare l'alimentazione, in modo simile all'uso di un telefono mentre è in carica. Tuttavia, fai attenzione alla capacità della batteria per evitare che si esaurisca completamente durante l'uso e la ricarica simultanei.
+
+Q6: La fotocamera non funziona? 
+-----------------------------------------------------
+
+Se la fotocamera non viene visualizzata o viene visualizzata in modo errato, segui questi passaggi per la risoluzione dei problemi:
+
+#. Assicurati che il cavo FPC della fotocamera sia collegato saldamente. Si consiglia di ricollegare la fotocamera e poi accendere il dispositivo.
+
+.. raw:: html
+
+       <div style="text-align: center;">
+           <video center loop autoplay muted style="max-width:90%">
+               <source src="_static/video/rpi_connect1.mp4" type="video/mp4">
+               Il tuo browser non supporta il tag video.
+           </video>
+       </div>
+
+2. Utilizza il seguente comando per verificare se la fotocamera viene riconosciuta.
+
+.. code-block::
+
+    libcamera-hello
+
