@@ -42,3 +42,38 @@ Q4 : Où puis-je trouver un tutoriel détaillé sur le Robot HAT ?
 Vous pouvez consulter un tutoriel complet sur le Robot HAT ici, avec des informations sur son matériel et son API.
 
 * |link_robot_hat|
+
+Q5 : À propos du chargeur de batterie
+-------------------------------------------------------------------
+
+Pour charger la batterie, il suffit de connecter une alimentation Type-C de 5V/2A au port d'alimentation du Robot Hat. Il n'est pas nécessaire d'allumer l'interrupteur d'alimentation du Robot Hat pendant la charge.
+Vous pouvez également utiliser l'appareil pendant que la batterie se recharge.
+
+.. image:: img/robot_hat_pic.png
+    :align: center
+    :width: 500
+
+Pendant la charge, la puissance d'entrée est amplifiée par la puce de charge pour recharger la batterie tout en alimentant simultanément le convertisseur DC-DC pour une utilisation externe, avec une puissance de charge d'environ 10 W.
+Si la consommation d'énergie externe reste élevée pendant une période prolongée, la batterie peut compléter l'alimentation électrique, de la même manière que lorsque vous utilisez un téléphone en charge. Cependant, veillez à surveiller la capacité de la batterie pour éviter qu'elle ne se décharge complètement lors d'une utilisation et d'une charge simultanées.
+
+Q6 : La caméra ne fonctionne pas ? 
+-----------------------------------------------------
+
+Si la caméra ne s’affiche pas ou s’affiche incorrectement, suivez ces étapes de dépannage :
+
+#. Assurez-vous que le câble FPC de la caméra est bien connecté. Il est recommandé de reconnecter la caméra, puis de rallumer l’appareil.
+
+.. raw:: html
+
+       <div style="text-align: center;">
+           <video center loop autoplay muted style="max-width:90%">
+               <source src="_static/video/rpi_connect1.mp4" type="video/mp4">
+               Votre navigateur ne supporte pas la balise vidéo.
+           </video>
+       </div>
+
+2. Utilisez la commande suivante pour vérifier si la caméra est reconnue.
+
+.. code-block::
+
+    libcamera-hello
