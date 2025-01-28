@@ -7,10 +7,10 @@ from .filedb import fileDB
 import os
 
 # user and User home directory
-User = os.popen('echo ${SUDO_USER:-$LOGNAME}').readline().strip()
-UserHome = os.popen('getent passwd %s | cut -d: -f 6' %
-                    User).readline().strip()
-config_file = '%s/.config/robot-hat/robot-hat.conf' % UserHome
+# User = os.popen('echo ${SUDO_USER:-$LOGNAME}').readline().strip()
+# UserHome = os.popen('getent passwd %s | cut -d: -f 6' %
+#                     User).readline().strip()
+# config_file = '%s/.config/robot-hat/robot-hat.conf' % UserHome
 
 
 class Robot(_Basic_class):
@@ -36,7 +36,7 @@ class Robot(_Basic_class):
     # max_dps = 500
     """Servo max Degree Per Second"""
 
-    def __init__(self, pin_list, db=config_file, name=None, init_angles=None, init_order=None, **kwargs):
+    def __init__(self, pin_list, db=None, name=None, init_angles=None, init_order=None, **kwargs):
         """
         Initialize the robot class
 
@@ -63,7 +63,7 @@ class Robot(_Basic_class):
 
         self.offset_value_name = f"{self.name}_servo_offset_list"
         # offset
-        self.db = fileDB(db=db, mode='774', owner=User)
+        self.db = fileDB(mode='774')
         temp = self.db.get(self.offset_value_name,
                            default_value=str(self.new_list(0)))
         temp = [float(i.strip()) for i in temp.strip("[]").split(",")]

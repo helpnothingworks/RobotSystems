@@ -55,7 +55,7 @@ class Pin(_Basic_class):
         "CE": 8,
     }
 
-    def __init__(self, pin, mode=None, pull=None, active_state:bool=None, *args, **kwargs):
+    def __init__(self, pin, mode=None, pull=None, *args, **kwargs):
         """
         Initialize a pin
 
@@ -65,10 +65,6 @@ class Pin(_Basic_class):
         :type mode: int
         :param pull: pin pull up/down(PUD_UP/PUD_DOWN/PUD_NONE)
         :type pull: int
-        :param active_state: active state of pin,  
-                            If True, when the hardware pin state is HIGH, the software pin is HIGH. 
-                            If False, the input polarity is reversed
-        :type active_state: bool or None
         """
         super().__init__(*args, **kwargs)
 
@@ -88,22 +84,22 @@ class Pin(_Basic_class):
         else:
             raise ValueError(
                 f'Pin should be in {self._dict.keys()}, not "{pin}"')
-        
-
         # setup
         self._value = 0
         self.gpio = None
-        self.setup(mode, pull, active_state)
+        self.setup(mode, pull)
         self._info("Pin init finished.")
 
     def close(self):
-        self.gpio.close()
+        # self.gpio.close()
+        return None
 
     def deinit(self):
-        self.gpio.close()
-        self.gpio.pin_factory.close()
+        # self.gpio.close()
+        # self.gpio.pin_factory.close()
+        return None
 
-    def setup(self, mode, pull=None, active_state=None):
+    def setup(self, mode, pull=None):
         """
         Setup the pin
 
@@ -130,15 +126,13 @@ class Pin(_Basic_class):
             if self.gpio.pin != None:
                 self.gpio.close()
         #
-        if mode in [None, self.OUT]:
-            self.gpio = OutputDevice(self._pin_num)
-        else:
-            if pull == self.PULL_UP:
-                self.gpio = InputDevice(self._pin_num, pull_up=True, active_state=None)
-            elif pull == self.PULL_DOWN:
-                self.gpio = InputDevice(self._pin_num, pull_up=False, active_state=None)
-            else:
-                self.gpio = InputDevice(self._pin_num, pull_up=None, active_state=active_state)
+        # if mode in [None, self.OUT]:
+        #     self.gpio = OutputDevice(self._pin_num)
+        # else:
+        #     if pull in [self.PULL_UP]:
+        #         self.gpio = InputDevice(self._pin_num, pull_up=True)
+        #     else:
+        #         self.gpio = InputDevice(self._pin_num, pull_up=False)
 
     def dict(self, _dict=None):
         """
@@ -178,22 +172,23 @@ class Pin(_Basic_class):
         :return: pin value(0/1)
         :rtype: int
         """
-        if value == None:
-            if self._mode in [None, self.OUT]:
-                self.setup(self.IN)
-            result = self.gpio.value
-            self._debug(f"read pin {self.gpio.pin}: {result}")
-            return result
-        else:
-            if self._mode in [self.IN]:
-                self.setup(self.OUT)
-            if bool(value):
-                value = 1
-                self.gpio.on()
-            else:
-                value = 0
-                self.gpio.off()
-            return value
+        # if value == None:
+        #     if self._mode in [None, self.OUT]:
+        #         self.setup(self.IN)
+        #     result = self.gpio.value
+        #     self._debug(f"read pin {self.gpio.pin}: {result}")
+        #     return result
+        # else:
+        #     if self._mode in [self.IN]:
+        #         self.setup(self.OUT)
+        #     if bool(value):
+        #         value = 1
+        #         self.gpio.on()
+        #     else:
+        #         value = 0
+        #         self.gpio.off()
+        #     return value
+        return None
 
     def on(self):
         """
@@ -202,7 +197,8 @@ class Pin(_Basic_class):
         :return: pin value(1)
         :rtype: int
         """
-        return self.value(1)
+        #return self.value(1)
+        return None
 
     def off(self):
         """
@@ -211,7 +207,8 @@ class Pin(_Basic_class):
         :return: pin value(0)
         :rtype: int
         """
-        return self.value(0)
+        #return self.value(0)
+        return None
 
     def high(self):
         """
@@ -220,7 +217,8 @@ class Pin(_Basic_class):
         :return: pin value(1)
         :rtype: int
         """
-        return self.on()
+        #return self.on()
+        return None
 
     def low(self):
         """
@@ -229,7 +227,8 @@ class Pin(_Basic_class):
         :return: pin value(0)
         :rtype: int
         """
-        return self.off()
+        #return self.off()
+        return None
 
     def irq(self, handler, trigger, bouncetime=200, pull=None):
         """
@@ -265,22 +264,22 @@ class Pin(_Basic_class):
         pressed_handler = None
         released_handler = None
         #
-        if not isinstance(self.gpio, Button):
-            if self.gpio != None:
-                self.gpio.close()
-            self.gpio = Button(pin=self._pin_num,
-                               pull_up=_pull_up,
-                               bounce_time=float(bouncetime / 1000))
-            self._bouncetime = bouncetime
-        else:
-            if bouncetime != self._bouncetime:
-                pressed_handler = self.gpio.when_pressed
-                released_handler = self.gpio.when_released
-                self.gpio.close()
-                self.gpio = Button(pin=self._pin_num,
-                                   pull_up=_pull_up,
-                                   bounce_time=float(bouncetime / 1000))
-                self._bouncetime = bouncetime
+        # if not isinstance(self.gpio, Button):
+        #     if self.gpio != None:
+        #         self.gpio.close()
+        #     self.gpio = Button(pin=self._pin_num,
+        #                        pull_up=_pull_up,
+        #                        bounce_time=float(bouncetime / 1000))
+        #     self._bouncetime = bouncetime
+        # else:
+        #     if bouncetime != self._bouncetime:
+        #         pressed_handler = self.gpio.when_pressed
+        #         released_handler = self.gpio.when_released
+        #         self.gpio.close()
+        #         self.gpio = Button(pin=self._pin_num,
+        #                            pull_up=_pull_up,
+        #                            bounce_time=float(bouncetime / 1000))
+        #         self._bouncetime = bouncetime
         #
         if trigger in [None, self.IRQ_FALLING]:
             pressed_handler = handler
